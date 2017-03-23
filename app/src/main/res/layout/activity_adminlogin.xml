@@ -5,8 +5,15 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gursewak.comfortfood.MainActivity">
-
+    tools:context="com.example.gursewak.comfortfood.Adminlogin">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
    <ImageView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
@@ -38,7 +45,7 @@
       <ImageView
           android:layout_width="50dp"
           android:layout_height="50dp"
-          android:src="@drawable/user"
+          android:src="@drawable/boy"
           android:padding="10dp"
           android:background="@color/redcolor"
           android:tint="#fff"
@@ -51,6 +58,7 @@
           android:textColorHint="#a49f9f"
           android:background="@null"
           android:paddingLeft="5dp"
+          android:id="@+id/edittext_user"
           />
    </LinearLayout>
 
@@ -77,6 +85,7 @@
           android:textColorHint="#a49f9f"
           android:background="@null"
           android:paddingLeft="5dp"
+          android:id="@+id/edittext_pass"
           />
    </LinearLayout>
   <LinearLayout
@@ -86,6 +95,9 @@
       android:layout_below="@id/text_view3"
       android:layout_margin="15dp"
       android:gravity="center"
+      android:onClick="login"
+      android:clickable="true"
+      android:id="@+id/linear_layout"
       >
      <TextView
          android:layout_width="wrap_content"
@@ -94,8 +106,15 @@
          android:textColor="#fff"
          android:textStyle="bold"
          android:textSize="30dp"
+
+         android:id="@+id/text_viewlogin"
         />
 
   </LinearLayout>
+
+
+</RelativeLayout>
+
+    </ScrollView>
 </RelativeLayout>
 

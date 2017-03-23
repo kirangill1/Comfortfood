@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#439c2f"
+    android:orientation="vertical"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pizza"
+        android:scaleType="centerCrop"
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/redcolor"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/linear_layout1"
+        android:onClick="Alogin"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ADMIN LOGIN"
+        android:textSize="45dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_marginLeft="35dp"
+        android:id="@+id/admin_tv"
+
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/redcolor"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/linear_layout1"
+        android:onClick="Ulogin"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="USER LOGIN"
+            android:textSize="45dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_marginLeft="55dp"
+            android:id="@+id/user_tv"
+            />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
