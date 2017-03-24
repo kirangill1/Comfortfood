@@ -14,5 +14,7 @@ public class Restaurant_names extends AppCompatActivity {
         setContentView(R.layout.activity_restaurant_names);
     }
 
-    Intent i = new Intent(Restaurant_names.this, )
+
+
+
 }
