@@ -72,7 +72,10 @@ public class Adminlogin extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("done"))
                     {
-                        
+                        Intent i = new Intent(Adminlogin.this, Admin_Home.class);
+                        startActivity(i);
+
+                        finish();
                     }
                     else {
                         Toast.makeText(Adminlogin.this, "error try again ", Toast.LENGTH_SHORT).show();
