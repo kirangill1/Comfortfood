@@ -38,8 +38,7 @@ public class Adminlogin extends AppCompatActivity {
         String name = username_et.getText().toString();
         String pass = password_et.getText().toString();
 
-        String username = "kirangill";
-        String password = "12345";
+
 
         if(name.equals(""))
         {
@@ -53,28 +52,35 @@ public class Adminlogin extends AppCompatActivity {
         }
 
 
-        if (name.equals(username) && pass.equals(password)) {
 
-            Intent i = new Intent(Adminlogin.this, Menu.class);
-            startActivity(i);
-            finish();
-        } else {
-            Toast.makeText(Adminlogin.this, "incorrect input", Toast.LENGTH_SHORT).show();
-        }
 
         JSONObject json = new JSONObject();
 
         try {
-            json.put("user", username);
-            json.put("pass",password);
+            json.put("user", name);
+            json.put("pass", pass);
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        JsonObjectRequest job = new JsonObjectRequest("http:/192.168.1.5/comfortfood/adminlogin", json, new Response.Listener<JSONObject>() {
+        JsonObjectRequest job = new JsonObjectRequest("http://192.168.0.22/comfort_food/adminlogin.php", json, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+
+
+                try {
+                    if(response.getString("key").equals("done"))
+                    {
+                        
+                    }
+                    else {
+                        Toast.makeText(Adminlogin.this, "error try again ", Toast.LENGTH_SHORT).show();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
             }
         }, new Response.ErrorListener() {
