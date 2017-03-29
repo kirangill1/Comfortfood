@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_restaurant__detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gursewak.comfortfood.Restaurant_Detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d21d1d"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="RESTAURANT DETAIL"
+            android:textColorHint="#fff"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+           android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:id="@+id/Restaurant_name1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Restaurant_name1"
+            android:id="@+id/restaurant_2"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Restaurant name"
+                />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="10dp"
+            android:layout_below="@id/restaurant_2"
+            android:id="@+id/restaurant_3"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                />
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:layout_margin="10dp"
+        android:layout_below="@id/restaurant_3"
+         android:id="@+id/restaurant_4"
+        >
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:hint=""
+             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="10dp"
+            android:layout_below="@id/restaurant_4"
+            android:id="@+id/restaurant_5"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="10dp"
+            android:layout_below="@id/restaurant_5"
+            android:id="@+id/restaurant_6"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="10dp"
+            android:layout_below="@id/restaurant_6"
+            >
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+

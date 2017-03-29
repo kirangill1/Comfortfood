@@ -36,7 +36,9 @@
         <activity android:name=".Restaurant_names" />
         <activity android:name=".Profile" />
         <activity android:name=".Feedback" />
-        <activity android:name=".Admin_Home"></activity>
+        <activity android:name=".Admin_Home" />
+        <activity android:name=".Restaurant_Detail" />
+        <activity android:name=".Menu_list"></activity>
     </application>
 
 </manifest>
