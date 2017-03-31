@@ -33,7 +33,7 @@ public class Userlogin extends AppCompatActivity {
         setContentView(R.layout.activity_userlogin);
 
 
-               password_et = (EditText) findViewById(R.id.edittext_user);
+               username_et = (EditText) findViewById(R.id.edittext_user);
                 password_et = (EditText) findViewById(R.id.edittext_pass);
                 login_et = (TextView) findViewById(R.id.text_viewlogin);
 
@@ -42,11 +42,10 @@ public class Userlogin extends AppCompatActivity {
             }
 
             public void login(View v) {
-                String name = password_et.getText().toString();
+                String name = username_et.getText().toString();
                 String pass = password_et.getText().toString();
 
-                String username = "kirangill";
-                String password = "12345";
+
 
                 if(name.equals(""))
                 {
@@ -60,32 +59,44 @@ public class Userlogin extends AppCompatActivity {
                 }
 
 
-                if (name.equals(username) && pass.equals(password)) {
 
-                    Intent i = new Intent(Userlogin.this, Restaurant_names.class);
-                    startActivity(i);
-                    finish();
-                } else {
-                    Toast.makeText(Userlogin.this, "incorrect input", Toast.LENGTH_SHORT).show();
-                }
                 JSONObject json = new JSONObject();
 
                 try {
-                    json.put("user",username);
+                    json.put("user",name);
                     json.put("p",pass);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                JsonObjectRequest job = new JsonObjectRequest("http:/192.168.1.5/comfortfood/user_login", json, new Response.Listener<JSONObject>() {
+                JsonObjectRequest job = new JsonObjectRequest("http://192.168.0.69/comfort_food/userlgin.php", json, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+
+                        try {
+                            if(response.getString("key").equals("done"))
+                            {
+                                Intent i = new Intent(Userlogin.this , Restaurant_names.class);
+
+                                startActivity(i);
+
+                                finish();
+                            }
+
+                            else
+                            {
+                                Toast.makeText(Userlogin.this,"error try again",Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
+                        System.out.println(error);
 
                     }
                 });

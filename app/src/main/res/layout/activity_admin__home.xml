@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
 
-    tools:context="com.example.gursewak.comfortfood.Admin_home">
+    tools:context="com.example.gursewak.comfortfood.Admin_Home">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -196,7 +196,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/svg_user"/>
+                android:src="@drawable/svg_usersvg"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

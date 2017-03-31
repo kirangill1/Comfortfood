@@ -30,11 +30,14 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@+id/left_over"
+        >
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/radio_button"
         android:text=""
         />
@@ -46,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:id="@+id/radio_button1"
+            android:layout_marginTop="30dp"
             />
     </RadioGroup>
 

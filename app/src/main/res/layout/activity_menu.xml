@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_restaurant_names"
@@ -29,148 +30,18 @@
             android:background="#fff"
             android:id="@+id/first_lyout"
 
-            >
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/svg_user"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/image_et"
-                />
+            />
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="GUEST"
+                android:text="Menu"
                 android:textSize="40dp"
                 android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/image_et"
-                android:id="@+id/textview_1"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#918b8b"
-            >
-
-
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/man"
-                android:layout_marginTop="70dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/profile"
 
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Profile"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="70dp"
-                android:layout_toRightOf="@id/profile"
-
-                />
-
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/list"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/order"
-                android:layout_below="@id/profile"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Orders"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/order"
-                android:layout_below="@id/profile"
-                />
-
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/label"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/Offers"
-                android:layout_below="@id/order"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Offers"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/Offers"
-                android:layout_below="@id/order"
-                />
-
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/knife"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/Invite"
-                android:layout_below="@id/Offers"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Feedback"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/Invite"
-                android:layout_below="@id/Offers"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@id/Invite"
-                android:layout_margin="25dp"
-                android:background="#fff"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="LOGOUT"
-                    android:textColor="#000"
-                    android:textSize="35dp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-            </LinearLayout>
-        </RelativeLayout>
 
     </LinearLayout>
 
 
 
-</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

@@ -36,7 +36,7 @@
         <activity android:name=".Restaurant_names" />
         <activity android:name=".Profile" />
         <activity android:name=".Feedback" />
-        <activity android:name=".Admin_home" />
+        <activity android:name=".Admin_Home" />
         <activity android:name=".Admin_restaurantDetail" />
         <activity android:name=".Admin_Leftoverfood"></activity>
     </application>

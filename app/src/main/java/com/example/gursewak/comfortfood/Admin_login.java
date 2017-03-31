@@ -71,7 +71,7 @@ public class Admin_login extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("done"))
                     {
-                        Intent i = new Intent(Admin_login.this, Admin_home.class);
+                        Intent i = new Intent(Admin_login.this, Admin_Home.class);
                         startActivity(i);
 
                         finish();
