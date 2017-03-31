@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     android:background="#fff"
 
-    tools:context="com.example.gursewak.comfortfood.Admin_Home">
+    tools:context="com.example.gursewak.comfortfood.Admin_home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
 
@@ -28,6 +36,8 @@
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
+            android:onClick="restaurant_detail"
+            android:id="@+id/restaurant_details"
             >
             <ImageView
                 android:layout_width="80dp"
@@ -40,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:layout_marginTop="10dp"
-                android:text="RESTAURANT DETAILS"/>
+                android:text="RESTAURANT DETAILS"
+                android:id="@+id/restaurant_detail1"/>
 
         </LinearLayout>
 
@@ -51,7 +62,9 @@
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="#509617">
+            android:background="#509617"
+            android:onClick="left_food"
+            android:id="@+id/left_overfod">
 
             <ImageView
                 android:layout_width="80dp"
@@ -61,9 +74,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MENU"
+                android:text="LEFT OVER FOOD"
                 android:layout_marginTop="10dp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:id="@+id/Menu1"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -84,18 +98,21 @@
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
+            android:onClick="menu"
+            android:id="@+id/menuu"
             >
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/orders"/>
+                android:src="@drawable/menurest"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIEW ORDERS"
+                android:text="MENU"
                 android:layout_marginTop="10dp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:id="@+id/view_order1"/>
 
         </LinearLayout>
 
@@ -106,21 +123,24 @@
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="#961789">
+            android:background="#961789"
+            android:onClick="view_order"
+            android:id="@+id/view_orderr">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/svg_user"
+                android:src="@drawable/vieworder"
                 android:tint="#fff"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIEW USERS"
+                android:text="VIEW ORDERS"
                 android:layout_marginTop="10dp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:id="@+id/view_user1"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -129,8 +149,73 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
+        android:id="@+id/feedback_lay"
         android:layout_below="@+id/secondlayout"
-        android:weightSum="2">
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#22998f"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:onClick="view_feedback"
+            android:layout_weight="1"
+            android:id="@+id/view_feedbackk"
+            >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/feedback"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIEW FEEDBACK"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#af18fa"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:onClick="admin_profile"
+            android:layout_weight="1"
+            android:id="@+id/admin_profile"
+
+            >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/svg_user"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADMIN PROFILE"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+
+            </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/feedback_lay"
+        android:id="@+id/logoutt"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,6 +225,7 @@
             android:layout_margin="2dp"
             android:gravity="center"
             android:id="@+id/layout_profile"
+            android:onClick="logout"
 
             >
 
@@ -152,7 +238,8 @@
                 android:layout_height="wrap_content"
                 android:text="LOGOUT"
                 android:layout_marginTop="10dp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:id="@+id/logout1"/>
 
         </LinearLayout>
 
@@ -163,5 +250,9 @@
 
 
     </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

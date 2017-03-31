@@ -94,9 +94,24 @@ public class Usersignup extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest json = new JsonObjectRequest("http://192.168.0.56/comfort_food/signup.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest json = new JsonObjectRequest("http://192.168.0.69/comfort_food/signup.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+
+                try {
+                    if(response.getString("resultkey").equals("done"))
+                    {
+
+                        Toast.makeText(Usersignup.this , "done" , Toast.LENGTH_SHORT).show();
+                    }
+
+                    if(response.getString("resultkey").equals("user exist"))
+                    {
+                        Toast.makeText(Usersignup.this , "user name already exist" , Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
             }
         }, new Response.ErrorListener() {

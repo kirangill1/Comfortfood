@@ -4,12 +4,12 @@
     android:id="@+id/activity_restaurant__detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gursewak.comfortfood.Restaurant_Detail">
+    tools:context="com.example.gursewak.comfortfood.Admin_restaurantDetail">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#d21d1d"
+       android:background="@color/redcolor"
 
         >
 
@@ -85,16 +85,31 @@
                 android:hint="Food type"
                 android:textColorHint="#000"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/restaurant_5"
+            android:id="@+id/add"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pick up order time "
+                android:textColorHint="#000"/>
+        </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/restaurant_5"
-            android:background="#dad3d6"
+            android:layout_below="@+id/add"
+            android:background="#ef868b"
             android:layout_margin="15dp"
             android:text="ADD"
-            android:textSize="30dp"
+            android:textSize="40dp"
             android:textStyle="bold"
+            android:textColor="#d21d1d"
             />
 
     </RelativeLayout>

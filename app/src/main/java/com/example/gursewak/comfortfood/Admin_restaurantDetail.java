@@ -3,11 +3,11 @@ package com.example.gursewak.comfortfood;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Menu_list extends AppCompatActivity {
+public class Admin_restaurantDetail extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_list);
+        setContentView(R.layout.activity_admin_restaurantdetail);
     }
 }

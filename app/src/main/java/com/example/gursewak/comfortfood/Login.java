@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
 
     public void Alogin(View v)
     {
-        Intent i = new Intent(Login.this, Adminlogin.class);
+        Intent i = new Intent(Login.this, Admin_login.class);
         startActivity(i);
         finish();
 

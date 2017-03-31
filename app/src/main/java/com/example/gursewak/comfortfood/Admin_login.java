@@ -13,11 +13,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Adminlogin extends AppCompatActivity {
+public class Admin_login extends AppCompatActivity {
     private EditText username_et;
     private EditText password_et;
     private TextView login_et;
@@ -26,7 +25,7 @@ public class Adminlogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adminlogin);
+        setContentView(R.layout.activity_admin_login);
         
         username_et = (EditText) findViewById(R.id.edittext_user);
         password_et = (EditText) findViewById(R.id.edittext_pass);
@@ -42,12 +41,12 @@ public class Adminlogin extends AppCompatActivity {
 
         if(name.equals(""))
         {
-            Toast.makeText(Adminlogin.this, "enter the name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Admin_login.this, "enter the name", Toast.LENGTH_SHORT).show();
             return;
         }
         if(pass.equals(""))
         {
-            Toast.makeText(Adminlogin.this, "enter the password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Admin_login.this, "enter the password", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -64,7 +63,7 @@ public class Adminlogin extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest job = new JsonObjectRequest("http://192.168.0.22/comfort_food/adminlogin.php", json, new Response.Listener<JSONObject>() {
+        JsonObjectRequest job = new JsonObjectRequest("http://192.168.0.69/comfort_food/adminlogin.php", json, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -72,13 +71,13 @@ public class Adminlogin extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("done"))
                     {
-                        Intent i = new Intent(Adminlogin.this, Admin_Home.class);
+                        Intent i = new Intent(Admin_login.this, Admin_home.class);
                         startActivity(i);
 
                         finish();
                     }
                     else {
-                        Toast.makeText(Adminlogin.this, "error try again ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Admin_login.this, "error try again ", Toast.LENGTH_SHORT).show();
 
                     }
                 } catch (JSONException e) {
@@ -94,7 +93,7 @@ public class Adminlogin extends AppCompatActivity {
         });
 
         job.setRetryPolicy(new DefaultRetryPolicy(20000,2,3));
-        AppController app = new AppController(Adminlogin.this);
+        AppController app = new AppController(Admin_login.this);
 
         app.addToRequestQueue(job);
 
