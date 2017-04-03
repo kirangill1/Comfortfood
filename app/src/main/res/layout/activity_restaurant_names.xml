@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="#e90e0e"
-            android:id="@+id/restaurant_names">
+            android:id="@+id/restaurant_names"
+            >
 
     <TextView
         android:layout_width="match_parent"
@@ -200,14 +201,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="left"
+        android:background="@drawable/pizza"
         >
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="#fff"
             android:id="@+id/first_lyout"
-
             >
             <ImageView
                 android:layout_width="50dp"
@@ -234,60 +236,24 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#918b8b"
+
+
             >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/knife"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/edit_text"
-                />
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Restaurant"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/edit_text"
-                android:id="@+id/restarant"
-                />
-
+                android:layout_height="40dp"
+                android:background="#fff"
+                android:layout_margin="25dp"
+                android:id="@+id/profile_"
+                android:onClick="profile"
+                >
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/knife"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/edit_text1"
-                android:layout_below="@id/edit_text"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Menu"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/edit_text1"
-                android:id="@+id/menu"
-                android:layout_below="@id/restarant"
-                />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/man"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/profile"
-                android:layout_below="@id/edit_text1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/uuser"
+                android:padding="5dp"
+                android:id="@+id/usser"
+                android:background="@color/redcolor"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -296,22 +262,27 @@
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/profile"
-                android:layout_below="@id/menu"
+               android:layout_margin="9dp"
                 />
+    </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#fff"
+                android:layout_below="@+id/profile_"
+                android:layout_margin="25dp"
+                android:id="@+id/order_"
+                >
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/list"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_margin="5dp"
                 android:id="@+id/order"
-                android:layout_below="@id/profile"
                 />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -319,85 +290,54 @@
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/order"
-                android:layout_below="@id/profile"
-                />
+              android:layout_margin="9dp"
 
+
+                />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#fff"
+                android:layout_below="@+id/order_"
+                android:layout_margin="25dp"
+                android:id="@+id/feedback_"
+                >
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/label"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/Offers"
-                android:layout_below="@id/order"
+                android:src="@drawable/feedback"
+                android:layout_margin="5dp"
+                android:id="@+id/feedback"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Offers"
+                android:text="Feedback"
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/edit_text"
-                android:layout_below="@id/order"
+                android:layout_margin="9dp"
                 />
+            </LinearLayout>
 
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/knife"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/Invite"
-                android:layout_below="@id/Offers"
-                />
-            <TextView
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Invite"
-                android:textSize="20dp"
-                android:textColor="#000"
+                android:layout_height="40dp"
+                android:layout_below="@+id/feedback_"
+                android:layout_margin="39dp"
+                android:background="#fff"
+                android:text="LOGOUT"
+                android:textColor="@color/redcolor"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/edit_text"
-                android:layout_below="@id/Offers"
-                />
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/knife"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/sendfeedback"
-                android:layout_below="@id/Invite"
+                android:textSize="35dp"/>
 
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Send feedback"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/edit_text"
-                android:layout_below="@id/Invite"
-                />
+
+
+
+
         </RelativeLayout>
-
-
-
-
-
 
     </LinearLayout>
 

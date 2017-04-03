@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_card_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gursewak.comfortfood.Card_detail"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pizza"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="PAYMENT"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/circle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:id="@+id/text_view"
+            android:layout_marginBottom="30dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text_view"
+           android:background="#fff"
+            android:layout_margin="15dp"
+            android:id="@+id/card_number"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Card number"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textColorHint="#686262"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/card_number"
+            android:layout_margin="15dp"
+            android:background="#fff"
+            android:id="@+id/number"
+
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint=""
+                android:padding="5dp"
+                android:textColorHint="#686262"
+                android:textColor="#000"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/number"
+            android:layout_margin="15dp"
+            android:background="#fff"
+            android:id="@+id/go"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint=""
+                android:padding="5dp"
+                android:textColorHint="#686262"
+                android:textColor="#000"
+                />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/go"
+            android:background="#ef868b"
+            android:layout_margin="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="ADD"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="#d21d1d"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

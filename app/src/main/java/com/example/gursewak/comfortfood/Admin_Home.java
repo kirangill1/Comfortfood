@@ -40,7 +40,7 @@ public class Admin_Home extends AppCompatActivity {
 
     public void view_order (View v)
     {
-        Intent i = new Intent(Admin_Home.this ,Admin_restaurantDetail.class);
+        Intent i = new Intent(Admin_Home.this ,Admin_vieworder.class);
         startActivity(i);
         return;
     }

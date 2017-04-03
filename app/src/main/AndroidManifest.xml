@@ -31,14 +31,19 @@
 
         <activity android:name=".Usersignup" />
         <activity android:name=".Admin_login" />
-        <activity android:name=".Menu" />
         <activity android:name=".Userlogin" />
         <activity android:name=".Restaurant_names" />
         <activity android:name=".Profile" />
         <activity android:name=".Feedback" />
         <activity android:name=".Admin_Home" />
         <activity android:name=".Admin_restaurantDetail" />
-        <activity android:name=".Admin_Leftoverfood"></activity>
+        <activity android:name=".Admin_Leftoverfood" />
+        <activity android:name=".Menu" />
+        <activity android:name=".Admin_vieworder" />
+        <activity android:name=".Add_newitem" />
+        <activity android:name=".Payment_mode" />
+        <activity android:name=".Card_detail" />
+        <activity android:name=".Order_configuration"></activity>
     </application>
 
 </manifest>
