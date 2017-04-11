@@ -69,7 +69,7 @@ public class Userlogin extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                JsonObjectRequest job = new JsonObjectRequest("http://192.168.0.69/comfort_food/userlgin.php", json, new Response.Listener<JSONObject>() {
+                JsonObjectRequest job = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/userlgin.php", json, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
 
@@ -112,6 +112,13 @@ public class Userlogin extends AppCompatActivity {
                 startActivity(i);
                 return;
             }
+
+    public void forget_password(View v)
+    {
+        Intent i = new Intent(Userlogin.this,Forget_password.class);
+        startActivity(i);
+        return;
+    }
 
 
 

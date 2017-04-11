@@ -94,7 +94,7 @@ public class Usersignup extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest json = new JsonObjectRequest("http://192.168.0.69/comfort_food/signup.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest json = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/signup.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 

@@ -26,6 +26,7 @@ public class Admin_login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
+
         
         username_et = (EditText) findViewById(R.id.edittext_user);
         password_et = (EditText) findViewById(R.id.edittext_pass);
@@ -63,7 +64,7 @@ public class Admin_login extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest job = new JsonObjectRequest("http://192.168.0.69/comfort_food/adminlogin.php", json, new Response.Listener<JSONObject>() {
+        JsonObjectRequest job = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/adminlogin.php", json, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -98,6 +99,13 @@ public class Admin_login extends AppCompatActivity {
         app.addToRequestQueue(job);
 
 
+    }
+
+    public void forget_passwrd(View v)
+    {
+        Intent i = new Intent(Admin_login.this ,Forget_password.class);
+        startActivity(i);
+        return;
     }
 
 

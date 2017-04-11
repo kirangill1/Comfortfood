@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.gursewak.comfortfood.Menu"
     >
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,19 +33,90 @@
            android:layout_marginTop="10dp"
             android:id="@+id/text_view"
               />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/text_view"
+            android:background="@color/redcolor"
+            android:layout_margin="15dp"
+            android:id="@+id/sandwich"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="SANDWICH"
+                android:textSize="30dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/sandwich"
+            android:background="@color/redcolor"
+            android:layout_margin="15dp"
+            android:id="@+id/burger"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="BURGER"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="30dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/burger"
+            android:background="@color/redcolor"
+            android:layout_margin="15dp"
+            android:id="@+id/pizza"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="PIZZA"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/pizza"
+            android:background="#ef868b"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="CHECKOUT"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#d21d1d"
+            android:id="@+id/checkout"
+            android:onClick="check_out"
+
+            />
+
+
         <Button
             android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/text_view"
+            android:layout_height="50dp"
+            android:layout_below="@+id/checkout"
             android:background="#ef868b"
-            android:layout_marginTop="330dp"
-            android:layout_marginLeft="300dp"
+          android:layout_centerHorizontal="true"
             android:text="ADD MENU"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#d21d1d"
             android:onClick="add_menu"
             />
+
+        </RelativeLayout>
+    </ScrollView>
     </RelativeLayout>
 
-</RelativeLayout>
+

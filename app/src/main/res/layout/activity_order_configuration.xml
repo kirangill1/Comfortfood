@@ -4,7 +4,7 @@
     android:id="@+id/activity_order_configuration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gursewak.comfortfood.Order_configuration">
+    tools:context="com.example.gursewak.comfortfood.Admin_vieworder$Order_configuration">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"

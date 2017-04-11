@@ -1,252 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_restaurant_names"
+    android:id="@+id/activity_restaurant_names_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.gursewak.comfortfood.Restaurant_names"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#fff"
-        android:orientation="horizontal"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="#e90e0e"
-            android:id="@+id/restaurant_names"
-            >
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:textSize="30dp"
-        android:text="RESTAURANT NAMES"
-        android:textStyle="bold"
-        android:textColor="#fff"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
+        android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal"
+       />
 
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/pizza"
+               android:scaleType="centerCrop"
+               />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/orderr"
+        android:layout_margin="6dp"
+        android:onClick="lines"
         />
+           <TextView
+               android:layout_width="160dp"
+               android:layout_height="150dp"
+               android:text="RESTAURANT NAMES"
+               android:textSize="21dp"
+               android:textColor="#fff"
+               android:gravity="center"
+               android:textStyle="bold"
+               android:background="@drawable/circle"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="10dp"
+               android:id="@+id/text_view"
+               android:layout_marginBottom="20dp"
+               />
+         <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_below="@+id/text_view"
+               android:background="#fff"
+               android:layout_margin="15dp"
+               >
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:text="brother dhaba"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="35dp"
+                   android:layout_marginLeft="3dp"
+                   android:onClick="brother_dhaba"
+                   android:background="@color/redcolor"
+                   />
+
+           </RelativeLayout>
+
+    </RelativeLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="KESAR DA DHABA"
-            android:textColor="#000"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/kesar_dhaba"
-            android:layout_below="@id/restaurant_names"
-            android:onClick="kesar_dhaba"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="KULCHA LAND"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/kulcha_land"
-            android:layout_below="@id/kesar_dhaba"
-            android:onClick="kulcha_land"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="BHARAWAN DA DHABA"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/bharawan_dhaba"
-            android:layout_below="@id/kulcha_land"
-            android:onClick="bharawan_dhaba"
-            />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="CRYSTAL RESTAURANT"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/crystal_restaurant"
-            android:layout_below="@id/bharawan_dhaba"
-            android:onClick="crystal_restaurant"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="FOOD VILLA"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/food_villa"
-            android:layout_below="@id/crystal_restaurant"
-            android:onClick="food_villa"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="SHUDH"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/shudh"
-            android:layout_below="@id/food_villa"
-            android:onClick="shudh"
-            />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="SARHAD"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/sarhad"
-            android:layout_below="@id/shudh"
-            android:onClick="sarhad"
-            />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="MAKHAN RESTAURANT"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/makhan_restaurant"
-            android:layout_below="@id/sarhad"
-            android:onClick="makhan_restaurant"
-            />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="HAVELI"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/haveli"
-            android:layout_below="@id/makhan_restaurant"
-            android:onClick="haveli"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="SANJHA CHULA"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/sanjha_chulha"
-            android:layout_below="@id/haveli"
-            android:onClick="sanjha_chulha"
-            />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="BROTHER DHABA"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/brother_dhaba"
-            android:layout_below="@id/sanjha_chulha"
-            android:onClick="brother_dhaba"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textSize="30dp"
-            android:text="CHARMING CHICKEN"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/charming_chicken"
-            android:layout_below="@id/brother_dhaba"
-            android:onClick="charming_chicken"
-            />
-        </RelativeLayout>
-        </LinearLayout>
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="left"
-        android:background="@drawable/pizza"
-        >
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="#fff"
-            android:id="@+id/first_lyout"
-            >
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/svg_user"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/image_et"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="GUEST"
-                android:textSize="40dp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/image_et"
-                android:id="@+id/textview_1"/>
-        </RelativeLayout>
-
+        android:layout_gravity="left">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/first_lyout"
+            android:gravity="left"
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pizza"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="COMFORT FOOD"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/circle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text_view"
+            />
 
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_margin="20dp"
+            android:id="@+id/profile_"
+            android:onClick="profile"
+            android:layout_below="@+id/text_view"
             >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="#fff"
-                android:layout_margin="25dp"
-                android:id="@+id/profile_"
-                android:onClick="profile"
-                >
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -262,25 +125,26 @@
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
-               android:layout_margin="9dp"
+                android:layout_margin="9dp"
                 />
-    </LinearLayout>
+        </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="#fff"
-                android:layout_below="@+id/profile_"
-                android:layout_margin="25dp"
-                android:id="@+id/order_"
-                >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_below="@+id/profile_"
+            android:layout_margin="20dp"
+            android:id="@+id/order_"
+            >
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/list"
-                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/orderr"
                 android:id="@+id/order"
+                android:background="@color/redcolor"
+                android:padding="5dp"
                 />
 
             <TextView
@@ -290,26 +154,28 @@
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
-              android:layout_margin="9dp"
+                android:layout_margin="9dp"
 
 
                 />
-    </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="#fff"
-                android:layout_below="@+id/order_"
-                android:layout_margin="25dp"
-                android:id="@+id/feedback_"
-                >
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_below="@+id/order_"
+            android:layout_margin="20dp"
+            android:id="@+id/feedback_"
+
+            >
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/feedback"
-                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/feedbackk"
                 android:id="@+id/feedback"
+                android:background="@color/redcolor"
+                android:padding="5dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -320,25 +186,24 @@
                 android:textStyle="bold"
                 android:layout_margin="9dp"
                 />
-            </LinearLayout>
+        </LinearLayout>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/feedback_"
-                android:layout_margin="39dp"
-                android:background="#fff"
-                android:text="LOGOUT"
-                android:textColor="@color/redcolor"
-                android:textStyle="bold"
-                android:textSize="35dp"/>
-
-
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/feedback_"
+            android:layout_margin="39dp"
+            android:background="@color/redcolor"
+            android:text="LOGOUT"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            />
 
 
-        </RelativeLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
 
-</RelativeLayout>
+
+

@@ -46,6 +46,7 @@
                 android:textColorHint="#686262"
                 android:layout_margin="5dp"
                 android:textColor="#000"
+                android:background="@null"
                 />
         </RelativeLayout>
 
@@ -64,6 +65,7 @@
                 android:textColorHint="#686262"
                 android:layout_margin="5dp"
                 android:textColor="#000"
+                android:background="@null"
                 />
         </RelativeLayout>
 

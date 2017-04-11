@@ -23,6 +23,6 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
 
             }
-        },3000);
+        },2000);
     }
 }

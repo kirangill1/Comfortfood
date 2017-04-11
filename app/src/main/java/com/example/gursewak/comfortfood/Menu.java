@@ -12,6 +12,12 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
     }
+    public void check_out(View v)
+    {
+        Intent i = new Intent(Menu.this, Payment_mode.class);
+        startActivity(i);
+        return;
+    }
 
     public void add_menu(View v)
     {

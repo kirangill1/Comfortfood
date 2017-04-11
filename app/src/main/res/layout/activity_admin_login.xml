@@ -116,8 +116,22 @@
 
   </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="forget password"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_below="@+id/linear_layout"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:onClick="forget_passwrd"
 
-</RelativeLayout>
+            />
+
+
+
+    </RelativeLayout>
 
     </ScrollView>
 </RelativeLayout>

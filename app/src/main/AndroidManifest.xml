@@ -43,7 +43,11 @@
         <activity android:name=".Add_newitem" />
         <activity android:name=".Payment_mode" />
         <activity android:name=".Card_detail" />
-        <activity android:name=".Order_configuration"></activity>
+        <activity android:name=".Admin_vieworder$Order_configuration" />
+        <activity android:name=".User_viewmenu" />
+        <activity android:name=".Forget_password" />
+        <activity android:name=".Onetime_password" />
+        <activity android:name=".Newpasssword"></activity>
     </application>
 
 </manifest>
