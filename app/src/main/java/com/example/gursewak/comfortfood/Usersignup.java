@@ -1,6 +1,7 @@
 package com.example.gursewak.comfortfood;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Usersignup extends AppCompatActivity {
+    public EditText username_et;
     public EditText name_et;
     public EditText pass_et;
     public EditText cpass_et;
@@ -31,7 +33,8 @@ public class Usersignup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usersignup);
 
-        name_et = (EditText) findViewById(R.id.name_et);
+        username_et =(EditText)findViewById(R.id.name_et);
+        name_et = (EditText) findViewById(R.id.name_ett);
         pass_et = (EditText) findViewById(R.id.pass_et);
         cpass_et = (EditText) findViewById(R.id.cpass_et);
         mobile_et = (EditText) findViewById(R.id.mobile_et);
@@ -40,13 +43,19 @@ public class Usersignup extends AppCompatActivity {
     }
 
     public void signup(View v) {
-        String name = name_et.getText().toString();
+        final String username = username_et.getText().toString();
+        final String name = name_et.getText().toString();
         String pass = pass_et.getText().toString();
         String cpass = cpass_et.getText().toString();
         String mobile = mobile_et.getText().toString();
         Boolean ngo = ngo_rb.isChecked();
         Boolean user = user_rb.isChecked();
 
+
+        if (username.equals("")) {
+            Toast.makeText(Usersignup.this, "enter the username", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if (name.equals("")) {
             Toast.makeText(Usersignup.this, "enter the name", Toast.LENGTH_SHORT).show();
@@ -63,8 +72,8 @@ public class Usersignup extends AppCompatActivity {
             return;
         }
 
-        if (mobile.equals("")) {
-            Toast.makeText(Usersignup.this, "enter the mobile no", Toast.LENGTH_SHORT).show();
+        if (mobile.length() < 10) {
+            Toast.makeText(Usersignup.this, "enter valid mobile no", Toast.LENGTH_SHORT).show();
             return;
         }
         if (!cpass.equals(pass)) {
@@ -85,7 +94,8 @@ public class Usersignup extends AppCompatActivity {
         JSONObject job = new JSONObject();
 
         try {
-            job.put("n", name);
+            job.put("u", username);
+            job.put("n",name);
             job.put("p", pass);
             job.put("m", mobile);
             job.put("t",type);
@@ -103,6 +113,16 @@ public class Usersignup extends AppCompatActivity {
                     {
 
                         Toast.makeText(Usersignup.this , "done" , Toast.LENGTH_SHORT).show();
+                        SharedPreferences.Editor sp = getSharedPreferences("user_info" , MODE_PRIVATE).edit();
+                        sp.putString("username",name);
+                        sp.commit();
+
+
+                        Intent i = new Intent(Usersignup.this , Restaurant_names.class);
+
+                        startActivity(i);
+
+                        finish();
                     }
 
                     if(response.getString("resultkey").equals("user exist"))

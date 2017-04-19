@@ -54,7 +54,7 @@ public class Admin_Home extends AppCompatActivity {
 
     public void admin_profile (View v)
     {
-        Intent i = new Intent(Admin_Home.this ,Profile.class);
+        Intent i = new Intent(Admin_Home.this ,Admin_profile.class);
         startActivity(i);
         return;
     }

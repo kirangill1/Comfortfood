@@ -34,20 +34,45 @@
     android:id="@+id/text_view"
 
     />
-
-
-       <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_below="@id/text_view"
+            android:layout_margin="12dp"
+            android:id="@+id/text_vieww"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/boy"
+                android:padding="10dp"
+                android:background="@color/redcolor"
+                android:tint="#fff"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="username"
+                android:textColor="#000"
+                android:textColorHint="#686262"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:id="@+id/name_et"
+                />
+        </LinearLayout>
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#fff"
-        android:layout_below="@id/text_view"
+        android:layout_below="@id/text_vieww"
         android:layout_margin="12dp"
         android:id="@+id/text_view1"
         >
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/boy"
+            android:src="@drawable/svg_usersvg"
             android:padding="10dp"
             android:background="@color/redcolor"
             android:tint="#fff"
@@ -55,12 +80,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="username"
+            android:hint="name"
             android:textColor="#000"
             android:textColorHint="#686262"
             android:background="@null"
             android:paddingLeft="5dp"
-            android:id="@+id/name_et"
+            android:id="@+id/name_ett"
             />
     </LinearLayout>
 
@@ -142,6 +167,8 @@
                 android:textColor="#000"
                 android:textColorHint="#686262"
                 android:background="@null"
+                android:inputType="phone"
+                android:maxLength="10"
                 android:paddingLeft="5dp"
                 android:id="@+id/mobile_et"
                 />
@@ -150,7 +177,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_below="@id/text_view5"
             android:orientation="horizontal"
             android:id="@+id/radio_btn_lay"
@@ -187,7 +214,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@color/redcolor"
             android:layout_below="@id/radio_btn_lay"
             android:layout_margin="10dp"

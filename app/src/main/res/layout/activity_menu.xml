@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.gursewak.comfortfood.Menu"
     >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bluee"
+        android:scaleType="centerCrop"
+        />
     <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -13,13 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/pizza"
-            android:scaleType="center"
-            />
-
         <TextView
             android:layout_width="130dp"
             android:layout_height="130dp"
@@ -28,74 +27,24 @@
             android:textColor="#fff"
             android:gravity="center"
             android:textStyle="bold"
-            android:background="@drawable/circle"
+            android:background="@drawable/bluecircle"
             android:layout_centerHorizontal="true"
-           android:layout_marginTop="10dp"
+           android:layout_marginTop="5dp"
             android:id="@+id/text_view"
               />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/text_view"
-            android:background="@color/redcolor"
-            android:layout_margin="15dp"
-            android:id="@+id/sandwich"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="SANDWICH"
-                android:textSize="30dp"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                />
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/sandwich"
-            android:background="@color/redcolor"
-            android:layout_margin="15dp"
-            android:id="@+id/burger"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="BURGER"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="30dp"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/burger"
-            android:background="@color/redcolor"
-            android:layout_margin="15dp"
-            android:id="@+id/pizza"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="PIZZA"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:textColor="#fff"
-                />
-        </RelativeLayout>
 
         <Button
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/pizza"
-            android:background="#ef868b"
+            android:layout_below="@+id/text_view"
+            android:background="#0c3ec6"
             android:layout_margin="10dp"
             android:layout_centerHorizontal="true"
             android:text="CHECKOUT"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#d21d1d"
+            android:textColor="#82acf2"
             android:id="@+id/checkout"
             android:onClick="check_out"
 
@@ -106,12 +55,12 @@
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:layout_below="@+id/checkout"
-            android:background="#ef868b"
+            android:background="#0c3ec6"
           android:layout_centerHorizontal="true"
             android:text="ADD MENU"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#d21d1d"
+            android:textColor="#82acf2"
             android:onClick="add_menu"
             />
 

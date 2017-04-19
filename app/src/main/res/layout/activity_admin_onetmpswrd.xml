@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_admin_onetmpswrd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gursewak.comfortfood.Admin_onetmpswrd"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/redpicc"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:text="ONE TIME PASSWORD"
+            android:textSize="21dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/circle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:id="@+id/text_view"
+            android:layout_marginBottom="30dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#fff"
+            android:layout_below="@+id/text_view"
+            android:textColor="#000"
+            android:layout_margin="12dp"
+            android:id="@+id/otp_et"
+            android:hint="enter the OTP code"
+            android:textColorHint="#686262"
+            android:padding="3dp"
+            android:inputType="number"
+            android:maxLength="4"
+            />
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:text="verify"
+            android:textColor="@color/redcolor"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:onClick="verify_"
+            android:background="#ef868b"
+            android:layout_below="@+id/otp_et"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

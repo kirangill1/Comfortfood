@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_admin_frgtpswrd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gursewak.comfortfood.Admin_frgtpswrd">
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/redpicc"
+        android:scaleType="centerCrop"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="150dp"
+                android:text="FORGET PASSWORD"
+                android:textSize="22dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/circle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/text_view"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#fff"
+                android:layout_margin="12dp"
+                android:layout_below="@id/text_view"
+                android:id="@+id/restaurant_2"
+
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Enter Email"
+                    android:textColorHint="#686262"
+                    android:textColor="#000"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/mobile_et"
+                    android:background="@null"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/restaurant_2"
+                android:background="#ef868b"
+                android:layout_margin="15dp"
+                android:layout_centerHorizontal="true"
+                android:text="NEXT"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:textColor="#d21d1d"
+                android:onClick="next_">
+
+            </Button>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

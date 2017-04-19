@@ -6,15 +6,18 @@
     android:layout_height="match_parent"
     tools:context="com.example.gursewak.comfortfood.Add_newitem">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pinkyy"
+        android:scaleType="centerCrop"
+        />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/pizza"
-            android:scaleType="centerCrop"
+
             />
         <TextView
             android:layout_width="140dp"

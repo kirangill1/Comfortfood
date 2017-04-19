@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.gursewak.comfortfood.Feedback"
     >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/seagren"
+        android:scaleType="centerCrop"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/pizza"
-            android:scaleType="center"
-            />
         <TextView
             android:layout_width="135dp"
             android:layout_height="130dp"
@@ -24,9 +24,9 @@
             android:textColor="#fff"
             android:gravity="center"
             android:textStyle="bold"
-            android:background="@drawable/circle"
+            android:background="@drawable/seagrncircle"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:id="@+id/text_view"
             />
     </RelativeLayout>

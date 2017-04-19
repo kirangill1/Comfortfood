@@ -149,7 +149,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="forget password"
+            android:text="forget/change password"
             android:textSize="30dp"
             android:textColor="#000"
             android:layout_below="@+id/linear_layout1"

@@ -47,7 +47,11 @@
         <activity android:name=".User_viewmenu" />
         <activity android:name=".Forget_password" />
         <activity android:name=".Onetime_password" />
-        <activity android:name=".Newpasssword"></activity>
+        <activity android:name=".Newpasssword" />
+        <activity android:name=".Admin_newpswrd" />
+        <activity android:name=".Admin_frgtpswrd" />
+        <activity android:name=".Admin_onetmpswrd" />
+        <activity android:name=".Admin_profile"></activity>
     </application>
 
 </manifest>

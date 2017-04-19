@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Forget_password extends AppCompatActivity {
 
@@ -20,6 +21,12 @@ public class Forget_password extends AppCompatActivity {
     {
 
         String mobile =  mobile_et.getText().toString();
+
+        if(mobile.length() < 10)
+        {
+            Toast.makeText(Forget_password.this , " please enter valid mobile number", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
          int randompin =  (int) (Math.random()*9000);
 

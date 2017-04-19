@@ -1,6 +1,7 @@
 package com.example.gursewak.comfortfood;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +43,7 @@ public class Userlogin extends AppCompatActivity {
             }
 
             public void login(View v) {
-                String name = username_et.getText().toString();
+                final String name = username_et.getText().toString();
                 String pass = password_et.getText().toString();
 
 
@@ -76,6 +77,12 @@ public class Userlogin extends AppCompatActivity {
                         try {
                             if(response.getString("key").equals("done"))
                             {
+                                // code to save username throught app
+                                SharedPreferences.Editor sp = getSharedPreferences("user_info" , MODE_PRIVATE).edit();
+                                sp.putString("username",name);
+                                sp.commit();
+
+
                                 Intent i = new Intent(Userlogin.this , Restaurant_names.class);
 
                                 startActivity(i);
@@ -121,11 +128,7 @@ public class Userlogin extends AppCompatActivity {
     }
 
 
-
-
-
-
-        }
+   }
 
 
 

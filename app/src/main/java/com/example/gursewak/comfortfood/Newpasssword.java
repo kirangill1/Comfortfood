@@ -40,9 +40,9 @@ public class Newpasssword extends AppCompatActivity {
         String c_pass = confirmpass.getText().toString();
 
 
-         if(s_pass.equals(""))
+         if(s_pass.length() <8)
     {
-        Toast.makeText(Newpasssword.this, "enter the pasword", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Newpasssword.this, "enter atleast 8 digit password", Toast.LENGTH_SHORT).show();
         return;
     }
         if(c_pass.equals(""))

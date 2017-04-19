@@ -12,19 +12,22 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/pizza"
+        android:src="@drawable/gren"
         android:scaleType="centerCrop"
         />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="VAILA!"
-        android:textColor="@color/redcolor"
-        android:textStyle="bold"
-        android:textSize="40dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:text="VALINA!"
+        android:textSize="25dp"
+        android:textColor="#fff"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:background="@drawable/greenn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/text_view"
+        android:layout_marginBottom="10dp"
         />
-
 </RelativeLayout>
 </RelativeLayout>

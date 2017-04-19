@@ -45,9 +45,9 @@ public class Admin_login extends AppCompatActivity {
             Toast.makeText(Admin_login.this, "enter the name", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(pass.equals(""))
+        if(pass.length()<8)
         {
-            Toast.makeText(Admin_login.this, "enter the password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Admin_login.this, "enter atleast 8 digit password", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -90,6 +90,7 @@ public class Admin_login extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
+                System.out.println(error);
             }
         });
 
@@ -103,7 +104,7 @@ public class Admin_login extends AppCompatActivity {
 
     public void forget_passwrd(View v)
     {
-        Intent i = new Intent(Admin_login.this ,Forget_password.class);
+        Intent i = new Intent(Admin_login.this ,Admin_frgtpswrd.class);
         startActivity(i);
         return;
     }

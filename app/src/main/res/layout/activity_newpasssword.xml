@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/pizza"
+            android:src="@drawable/redpicc"
             android:scaleType="centerCrop"/>
         <TextView
             android:layout_width="140dp"
@@ -47,6 +47,7 @@
                 android:textColor="#000"
                 android:background="@null"
                 android:id="@+id/passwrd_et"
+                android:inputType="textPassword"
                 />
         </RelativeLayout>
 
@@ -67,6 +68,7 @@
                 android:textColor="#000"
                 android:background="@null"
                 android:id="@+id/confirmpass_et"
+                android:inputType="textPassword"
                 />
         </RelativeLayout>
 

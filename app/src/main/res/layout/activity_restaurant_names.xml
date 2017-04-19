@@ -5,24 +5,27 @@
     android:id="@+id/activity_restaurant_names_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#faf4f4"
     tools:context="com.example.gursewak.comfortfood.Restaurant_names"
     >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/reddy"
+        android:scaleType="centerCrop"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="horizontal"
        />
 
-           <ImageView
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:src="@drawable/pizza"
-               android:scaleType="centerCrop"
-               />
+
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -44,26 +47,16 @@
                android:id="@+id/text_view"
                android:layout_marginBottom="20dp"
                />
-         <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="40dp"
-               android:layout_below="@+id/text_view"
-               android:background="#fff"
-               android:layout_margin="15dp"
-               >
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="40dp"
-                   android:text="brother dhaba"
-                   android:textColor="#fff"
-                   android:textStyle="bold"
-                   android:textSize="35dp"
-                   android:layout_marginLeft="3dp"
-                   android:onClick="brother_dhaba"
-                   android:background="@color/redcolor"
-                   />
 
-           </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rest_names_recycler"
+            android:layout_below="@+id/text_view">
+
+        </android.support.v7.widget.RecyclerView>
+
 
     </RelativeLayout>
 
@@ -71,7 +64,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="left">
+        android:layout_gravity="left"
+        android:background="@drawable/redpic">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -80,11 +74,7 @@
             android:gravity="left"
 
             />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/pizza"
-            android:scaleType="centerCrop"/>
+
         <TextView
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -96,7 +86,7 @@
             android:background="@drawable/circle"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:id="@+id/text_view"
+            android:id="@+id/text_view2"
             />
 
 
@@ -108,7 +98,8 @@
             android:layout_margin="20dp"
             android:id="@+id/profile_"
             android:onClick="profile"
-            android:layout_below="@+id/text_view"
+            android:clickable="true"
+            android:layout_below="@+id/text_view2"
             >
             <ImageView
                 android:layout_width="40dp"
@@ -116,12 +107,13 @@
                 android:src="@drawable/uuser"
                 android:padding="5dp"
                 android:id="@+id/usser"
-                android:background="@color/redcolor"
+                android:tint="#e60f0f"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Profile"
+
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
@@ -136,6 +128,8 @@
             android:layout_below="@+id/profile_"
             android:layout_margin="20dp"
             android:id="@+id/order_"
+            android:onClick="order"
+            android:clickable="true"
             >
 
             <ImageView
@@ -143,7 +137,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/orderr"
                 android:id="@+id/order"
-                android:background="@color/redcolor"
+                android:tint="#e60f0f"
                 android:padding="5dp"
                 />
 
@@ -166,6 +160,8 @@
             android:layout_below="@+id/order_"
             android:layout_margin="20dp"
             android:id="@+id/feedback_"
+            android:onClick="feedback"
+            android:clickable="true"
 
             >
 
@@ -174,8 +170,10 @@
                 android:layout_height="40dp"
                 android:src="@drawable/feedbackk"
                 android:id="@+id/feedback"
-                android:background="@color/redcolor"
+                android:tint="#e60f0f"
                 android:padding="5dp"
+                android:background="#fff"
+
                 />
             <TextView
                 android:layout_width="match_parent"
