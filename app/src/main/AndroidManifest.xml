@@ -51,7 +51,9 @@
         <activity android:name=".Admin_newpswrd" />
         <activity android:name=".Admin_frgtpswrd" />
         <activity android:name=".Admin_onetmpswrd" />
-        <activity android:name=".Admin_profile"></activity>
+        <activity android:name=".Admin_profile" />
+        <activity android:name=".Change_password" />
+        <activity android:name=".userchange_pass"></activity>
     </application>
 
 </manifest>

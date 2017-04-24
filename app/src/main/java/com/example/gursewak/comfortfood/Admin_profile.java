@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
@@ -95,6 +96,34 @@ public class Admin_profile extends AppCompatActivity {
         String mobile = mobile_et.getText().toString();
         String email = email_et.getText().toString();
         String city = city_et.getText().toString();
+
+        if(username_et.equals(""))
+        {
+            Toast.makeText(Admin_profile.this, "enter your username", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(name_et.equals(""))
+        {
+            Toast.makeText(Admin_profile.this, "enter the name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(mobile_et.equals(""))
+        {
+            Toast.makeText(Admin_profile.this, "enter the mobile no", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(email_et.equals(""))
+        {
+            Toast.makeText(Admin_profile.this, "enter the email", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(city_et.equals(""))
+        {
+            Toast.makeText(Admin_profile.this, "enter the city", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         JSONObject job  = new JSONObject();
 

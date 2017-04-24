@@ -5,5 +5,5 @@ package com.example.gursewak.comfortfood;
  */
 
 public class Internet {
-    public static String ip = "192.168.0.37";
+    public static String ip = "192.168.43.189";
 }

@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:text="PROFILE"
+                android:text="USER PROFILE"
                 android:textSize="25dp"
                 android:textColor="#fff"
                 android:gravity="center"

@@ -3,21 +3,25 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fff"
-    >
+    android:id="@+id/restaurant_name_layout"
+    android:background="@drawable/roundedrectanle"
+    android:layout_margin="15dp">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RESTAURANT NAME"
         android:textSize="20dp"
-        android:textColor="#000"
+        android:textColor="@color/redcolor"
         android:textStyle="bold"
         android:id="@+id/restaurant_name"
+
         />
 </LinearLayout>
 
@@ -25,13 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ADDRESS"
             android:textSize="20dp"
-            android:textColor="#000"
+            android:textColor="@color/redcolor"
             android:textStyle="bold"
             android:id="@+id/addresss"
             />
@@ -41,14 +45,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CITY"
+            android:textSize="20dp"
+            android:textColor="@color/redcolor"
+            android:textStyle="bold"
+            android:id="@+id/cityy"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TYPE"
-            android:textSize="20dp"
-            android:textColor="#000"
             android:textStyle="bold"
+            android:textColor="@color/redcolor"
+            android:textSize="20dp"
             android:id="@+id/typee"
             />
     </LinearLayout>

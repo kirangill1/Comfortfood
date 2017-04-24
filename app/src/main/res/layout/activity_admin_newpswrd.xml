@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/text_view"
-            android:background="#fff"
+            android:background="@drawable/roundedrectanle"
             android:layout_margin="15dp"
             android:id="@+id/item_name"
             >
@@ -47,6 +47,7 @@
                 android:textColor="#000"
                 android:background="@null"
                 android:id="@+id/passwrd_et"
+                android:padding="3dp"
                 android:inputType="textPassword"
 
                 />
@@ -56,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/item_name"
-            android:background="#fff"
+            android:background="@drawable/roundedrectanle"
             android:layout_margin="15dp"
             android:id="@+id/item_type"
             >
@@ -70,6 +71,7 @@
                 android:background="@null"
                 android:id="@+id/confirmpass_et"
                 android:inputType="textPassword"
+                android:padding="3dp"
                 />
         </RelativeLayout>
 

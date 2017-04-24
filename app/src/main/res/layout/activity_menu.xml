@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.gursewak.comfortfood.Menu"
     >
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,8 +14,9 @@
         android:scaleType="centerCrop"
         />
     <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,36 +34,27 @@
            android:layout_marginTop="5dp"
             android:id="@+id/text_view"
               />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rest_menu_recycler"
+            android:layout_below="@+id/text_view">
 
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/text_view"
-            android:background="#0c3ec6"
-            android:layout_margin="10dp"
-            android:layout_centerHorizontal="true"
-            android:text="CHECKOUT"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#82acf2"
-            android:id="@+id/checkout"
-            android:onClick="check_out"
-
-            />
+        </android.support.v7.widget.RecyclerView>
 
 
         <Button
             android:layout_width="70dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/checkout"
             android:background="#0c3ec6"
-          android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="true"
             android:text="ADD MENU"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#82acf2"
             android:onClick="add_menu"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="290dp"
             />
 
         </RelativeLayout>

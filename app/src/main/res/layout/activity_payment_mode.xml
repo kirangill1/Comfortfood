@@ -28,9 +28,9 @@
         android:textColor="#fff"
         android:gravity="center"
         android:textStyle="bold"
-        android:background="@drawable/ggreen"
+        android:background="@drawable/greenn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/text_view"
         android:layout_marginBottom="30dp"
         />

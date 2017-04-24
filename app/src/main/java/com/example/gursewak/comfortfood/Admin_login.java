@@ -109,6 +109,13 @@ public class Admin_login extends AppCompatActivity {
         return;
     }
 
+    public void change_password(View v)
+    {
+        Intent i = new Intent(Admin_login.this,Change_password.class);
+        startActivity(i);
+        return;
+    }
+
 
 
 

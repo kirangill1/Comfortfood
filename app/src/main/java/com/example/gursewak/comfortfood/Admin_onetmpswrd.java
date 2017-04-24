@@ -8,9 +8,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Admin_onetmpswrd extends AppCompatActivity {
+
     EditText otp_et;
     String pin;
-    String email;
+    String mobile ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,7 @@ public class Admin_onetmpswrd extends AppCompatActivity {
 
         otp_et = (EditText) findViewById(R.id.otp_et);
 
-        email = getIntent().getStringExtra("email_key");
+         mobile  = getIntent().getStringExtra("phone_key");
 
         pin = getIntent().getStringExtra("pin_key");
 
@@ -36,7 +37,7 @@ public class Admin_onetmpswrd extends AppCompatActivity {
             Toast.makeText(Admin_onetmpswrd.this,"code matched", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(Admin_onetmpswrd.this, Admin_newpswrd.class );
 
-            i.putExtra("email_key", email);
+            i.putExtra("mobile_key", mobile);
             startActivity(i);
             finish();
 

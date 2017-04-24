@@ -17,14 +17,14 @@ import org.json.JSONObject;
 public class Admin_newpswrd extends AppCompatActivity {
     EditText password ;
     EditText confirmpass;
-    String email;
+    String mobile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_newpswrd);
 
-        email = getIntent().getStringExtra("email_key");
+        mobile = getIntent().getStringExtra("mobile_key");
 
         password = (EditText) findViewById(R.id.passwrd_et);
         confirmpass = (EditText)findViewById(R.id.confirmpass_et);
@@ -58,7 +58,7 @@ public class Admin_newpswrd extends AppCompatActivity {
         JSONObject job = new JSONObject();
 
         try {
-            job.put("email_key" , email );
+            job.put("mobile_key" , mobile );
             job.put("pass_key" , s_pass);
         } catch (JSONException e) {
             e.printStackTrace();

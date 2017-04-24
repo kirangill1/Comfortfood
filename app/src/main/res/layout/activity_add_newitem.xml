@@ -32,13 +32,14 @@
             android:layout_marginTop="30dp"
             android:id="@+id/text_view"
             android:layout_marginBottom="30dp"
+
             />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/text_view"
-            android:background="#fff"
+            android:background="@drawable/roundedrectanle"
             android:layout_margin="15dp"
             android:id="@+id/item_name"
             >
@@ -50,6 +51,7 @@
                 android:layout_margin="5dp"
                 android:textColor="#000"
                 android:background="@null"
+                android:padding="3dp"
                 />
         </RelativeLayout>
 
@@ -57,25 +59,26 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/item_name"
-            android:background="#fff"
+            android:background="@drawable/roundedrectanle"
             android:layout_margin="15dp"
-            android:id="@+id/item_type"
+            android:id="@+id/item_price"
             >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Item type"
+                android:hint="Item price"
                 android:textColorHint="#686262"
                 android:layout_margin="5dp"
                 android:textColor="#000"
                 android:background="@null"
+                android:padding="3dp"
                 />
         </RelativeLayout>
 
         <Button
             android:layout_width="150dp"
             android:layout_height="70dp"
-            android:layout_below="@+id/item_type"
+            android:layout_below="@+id/item_price"
             android:background="#ef868b"
             android:layout_margin="15dp"
             android:layout_centerHorizontal="true"

@@ -33,9 +33,9 @@
        android:textStyle="bold"
        android:background="@drawable/circle"
        android:layout_centerHorizontal="true"
-       android:layout_marginTop="30dp"
+       android:layout_marginTop="10dp"
        android:id="@+id/text_view"
-       android:layout_marginBottom="30dp"
+       android:layout_marginBottom="10dp"
 
        />
    <LinearLayout
@@ -118,8 +118,8 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="forget password                    change password"
+            android:layout_height="50dp"
+            android:text="forget password"
             android:textSize="30dp"
             android:textColor="#000"
             android:layout_below="@+id/linear_layout"
@@ -127,6 +127,25 @@
             android:textStyle="bold"
             android:clickable="true"
             android:onClick="forget_passwrd"
+            android:id="@+id/forget_pass"
+            android:background="@drawable/roundedrectanle"
+            android:layout_margin="10dp"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Change password"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_below="@+id/forget_pass"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:onClick="change_password"
+            android:background="@drawable/roundedrectanle"
+            android:layout_margin="10dp"
+
 
             />
 

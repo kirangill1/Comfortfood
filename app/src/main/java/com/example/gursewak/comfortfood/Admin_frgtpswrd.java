@@ -12,31 +12,32 @@ import android.widget.Toast;
 import java.util.regex.Matcher;
 
 public class Admin_frgtpswrd extends AppCompatActivity {
-    EditText email_et;
+    EditText mobile_et;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_frgtpswrd);
 
-        email_et = (EditText) findViewById(R.id.mobile_et);
+        mobile_et = (EditText) findViewById(R.id.mobile_et);
     }
     public void next_(View v)
     {
 
-        String email =  email_et.getText().toString();
 
-        if(! Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        String mobile =  mobile_et.getText().toString();
+
+        if(mobile.length() < 10)
         {
-            Toast.makeText(Admin_frgtpswrd.this , "please enter valid email" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(Admin_frgtpswrd.this , " please enter valid mobile number", Toast.LENGTH_SHORT).show();
             return;
         }
 
         int randompin =  (int) (Math.random()*9000);
 
-        Intent i = new Intent(Admin_frgtpswrd.this, Admin_onetmpswrd.class);
+        Intent i = new Intent(Admin_frgtpswrd.this, Onetime_password.class);
 
-        i.putExtra("email_key",email);
+        i.putExtra("mobile_key",mobile);
         i.putExtra("pin_key",String.valueOf(randompin));
 
 
@@ -44,4 +45,3 @@ public class Admin_frgtpswrd extends AppCompatActivity {
         finish();
     }
 }
-

@@ -38,7 +38,7 @@ public class Restaurant_names extends AppCompatActivity {
 
 
     public void get_data() {
-        JsonObjectRequest job = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/restaurant_detail.php", new JSONObject(), new Response.Listener<JSONObject>() {
+        JsonObjectRequest job = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/get_restaurant.php", new JSONObject(), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response){
                 try {
@@ -78,12 +78,7 @@ public class Restaurant_names extends AppCompatActivity {
         drawer.openDrawer(Gravity.LEFT);
     }
 
-    public void brother_dhaba(View v)
-    {
-        Intent i = new Intent(Restaurant_names.this,User_viewmenu.class);
-        startActivity(i);
-        return;
-    }
+
 
     public void profile(View v)
     {
@@ -101,6 +96,11 @@ public class Restaurant_names extends AppCompatActivity {
     {
         Intent i = new Intent(Restaurant_names.this,Feedback.class);
         startActivity(i);
+    }
+
+    public void  logoutt(View v)
+    {
+        finish();
     }
 
 

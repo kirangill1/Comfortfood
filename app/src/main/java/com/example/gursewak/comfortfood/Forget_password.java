@@ -8,8 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Forget_password extends AppCompatActivity {
-
     EditText mobile_et;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

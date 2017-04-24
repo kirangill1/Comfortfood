@@ -3,7 +3,9 @@ package com.example.gursewak.comfortfood;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
@@ -93,6 +95,79 @@ public class Profile extends AppCompatActivity {
 
         app.addToRequestQueue(jobreq);
     }
+
+    public void update_data(View v)
+    {
+
+        if(username_et.equals(""))
+    {
+        Toast.makeText(Profile.this, "enter your username", Toast.LENGTH_SHORT).show();
+        return;
+    }
+
+    if(name.equals(""))
+    {
+        Toast.makeText(Profile.this, "enter the name", Toast.LENGTH_SHORT).show();
+        return;
+    }
+    if(mobile.equals(""))
+    {
+        Toast.makeText(Profile.this, "enter the mobile no", Toast.LENGTH_SHORT).show();
+        return;
+    }
+    if(email.equals(""))
+    {
+        Toast.makeText(Profile.this, "enter the email", Toast.LENGTH_SHORT).show();
+        return;
+    }
+    if(city.equals(""))
+    {
+        Toast.makeText(Profile.this, "enter the city", Toast.LENGTH_SHORT).show();
+        return;
+    }
+        if(address.equals(""))
+        {
+            Toast.makeText(Profile.this, "enter the address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
+        JSONObject job  = new JSONObject();
+
+        try {
+            job.put("user", username_et);
+            job.put("n",name);
+            job.put("m",mobile);
+            job.put("e",email);
+            job.put("c",city);
+            job.put("a",address);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/user_editprofile.php", job, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                System.out.println(response);
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(error);
+
+            }
+        });
+
+        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 , 2));
+
+        AppController app = new AppController(Profile.this);
+        app.addToRequestQueue(jobreq);
+    }
+
 
 
 }

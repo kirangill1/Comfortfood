@@ -20,10 +20,10 @@
             android:scaleType="centerCrop"
             />
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:text="COMFORT FOOD"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:textColor="#fff"
             android:gravity="center"
             android:textStyle="bold"
@@ -31,7 +31,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:id="@+id/text_view"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="5dp"
 
             />
         <LinearLayout
@@ -113,28 +113,21 @@
                 />
 
         </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="have no account"
-            android:textSize="30dp"
-            android:textColor="#000"
-            android:layout_below="@+id/linear_layout"
-           android:gravity="center"
-            android:textStyle="bold"
-            android:id="@+id/edit_et"
-            />
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/redcolor"
-            android:layout_below="@id/edit_et"
+            android:layout_below="@id/linear_layout"
             android:layout_margin="15dp"
             android:gravity="center"
             android:onClick="signup"
             android:clickable="true"
             android:id="@+id/linear_layout1"
+            android:orientation="vertical"
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -148,16 +141,35 @@
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="forget/change password"
+            android:layout_height="50dp"
+            android:text="forget password"
             android:textSize="30dp"
             android:textColor="#000"
             android:layout_below="@+id/linear_layout1"
             android:gravity="center"
             android:textStyle="bold"
-            android:onClick="forget_password"
+            android:clickable="true"
+            android:onClick="forget_passwrd"
+            android:id="@+id/forget_pass"
+            android:background="@drawable/roundedrectanle"
+            android:layout_margin="10dp"
 
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Change password"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_below="@+id/forget_pass"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:onClick="change_password"
+            android:background="@drawable/roundedrectanle"
+            android:layout_margin="10dp"
+            />
+
 
     </RelativeLayout>
 

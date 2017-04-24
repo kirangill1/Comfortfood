@@ -126,6 +126,12 @@ public class Userlogin extends AppCompatActivity {
         startActivity(i);
         return;
     }
+    public void change_password(View v)
+    {
+        Intent i = new Intent(Userlogin.this,userchange_pass.class);
+        startActivity(i);
+        return;
+    }
 
 
    }

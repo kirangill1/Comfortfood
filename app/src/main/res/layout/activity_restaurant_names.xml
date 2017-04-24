@@ -13,6 +13,10 @@
         android:layout_height="match_parent"
         android:src="@drawable/reddy"
         android:scaleType="centerCrop"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,11 +65,14 @@
     </RelativeLayout>
 
 
+
+</ScrollView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        android:background="@drawable/redpic">
+        android:background="@drawable/reddy">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -196,6 +203,8 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="35dp"
+            android:onClick="logoutt"
+            android:clickable="true"
             />
 
 

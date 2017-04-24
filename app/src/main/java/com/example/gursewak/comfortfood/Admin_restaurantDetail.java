@@ -1,10 +1,12 @@
 package com.example.gursewak.comfortfood;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
@@ -32,6 +34,8 @@ public class Admin_restaurantDetail extends AppCompatActivity {
         city_et = (EditText) findViewById(R.id.city_);
         foodtype_et = (EditText) findViewById(R.id.foodtype_);
         pickup_et = (EditText) findViewById(R.id.pickup_);
+
+
     }
 
 
@@ -43,6 +47,37 @@ public class Admin_restaurantDetail extends AppCompatActivity {
         String city = city_et.getText().toString();
         String foodtype = foodtype_et.getText().toString();
         String pickup = pickup_et.getText().toString();
+
+        if(restaurantname_et.equals(""))
+        {
+            Toast.makeText(Admin_restaurantDetail.this, "enter the restaurant name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(address_et.equals(""))
+        {
+            Toast.makeText(Admin_restaurantDetail.this, "enter the address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(city_et.equals(""))
+        {
+            Toast.makeText(Admin_restaurantDetail.this, "enter the city", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(foodtype_et.equals(""))
+        {
+            Toast.makeText(Admin_restaurantDetail.this, "enter the food type", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(pickup_et.equals(""))
+        {
+            Toast.makeText(Admin_restaurantDetail.this, "enter the pickup time", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
 
         JSONObject job = new JSONObject();
@@ -62,24 +97,30 @@ public class Admin_restaurantDetail extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        System.out.println(job);
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/add_restaurant.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/restaurant_detail.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 System.out.println(response);
 
                 try {
-                    JSONArray jarr =  response.getJSONArray("key");
+                    if(response.getString("key").equals("done"))
+                    {
 
-                    JSONObject job_response = (JSONObject) jarr.get(0);
+                        Toast.makeText(Admin_restaurantDetail.this , "restaurant detail added succesfully" , Toast.LENGTH_SHORT).show();
 
-                    restaurantname_et.setText(job_response.getString("restaurant name"));
-                    address_et.setText( job_response.getString("address") );
-                    city_et.setText( job_response.getString("city"));
-                    foodtype_et.setText( job_response.getString("food type"));
-                    pickup_et.setText(job_response.getString("pick up"));
 
+
+
+                        finish();
+                    }
+
+                    if(response.getString("key").equals("restaurant exist"))
+                    {
+                        Toast.makeText(Admin_restaurantDetail.this , "restaurant already exist" , Toast.LENGTH_SHORT).show();
+                    }
 
 
                 } catch (JSONException e) {
