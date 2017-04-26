@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -53,7 +56,9 @@
         <activity android:name=".Admin_onetmpswrd" />
         <activity android:name=".Admin_profile" />
         <activity android:name=".Change_password" />
-        <activity android:name=".userchange_pass"></activity>
+        <activity android:name=".userchange_pass" />
+        <activity android:name=".Admin_signup" />
+        <activity android:name=".No_leftfood" />
     </application>
 
 </manifest>

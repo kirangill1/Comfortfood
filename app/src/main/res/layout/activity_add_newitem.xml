@@ -13,6 +13,11 @@
         android:scaleType="centerCrop"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,6 +55,7 @@
                 android:textColorHint="#686262"
                 android:layout_margin="5dp"
                 android:textColor="#000"
+                android:id="@+id/item_namee"
                 android:background="@null"
                 android:padding="3dp"
                 />
@@ -72,23 +78,71 @@
                 android:textColor="#000"
                 android:background="@null"
                 android:padding="3dp"
+                android:id="@+id/item_pricee"
                 />
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/item_price"
+            android:background="@drawable/roundedrectanle"
+            android:layout_margin="15dp"
+            android:id="@+id/item_type"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Item type"
+                android:textColorHint="#686262"
+                android:layout_margin="5dp"
+                android:textColor="#000"
+                android:background="@null"
+                android:padding="3dp"
+                android:id="@+id/item_typee"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_type"
+            android:orientation="horizontal"
+            android:id="@+id/image_layout"
+            >
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/restaurant_logo"
+                android:id="@+id/menu_image"
+                android:onClick="add_image"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
         <Button
             android:layout_width="150dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/item_price"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_layout"
             android:background="#ef868b"
-            android:layout_margin="15dp"
+
+
             android:layout_centerHorizontal="true"
             android:text="ADD"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="#d21d1d"
+            android:onClick="save_menu"
+            android:clickable="true"
 
             />
 
 
-    </RelativeLayout>
+
+
 </RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+

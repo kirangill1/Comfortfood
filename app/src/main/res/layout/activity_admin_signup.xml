@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main2"
+    android:id="@+id/activity_admin_signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
-    tools:context="com.example.gursewak.comfortfood.Usersignup">
-<ScrollView
+    tools:context="com.example.gursewak.comfortfood.Admin_signup"
+    >
+    <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/pizza"
-        android:scaleType="centerCrop"
-        />
-    <TextView
-    android:layout_width="120dp"
-    android:layout_height="120dp"
-    android:text="COMFORT FOOD"
-    android:textSize="20dp"
-    android:textColor="#fff"
-    android:gravity="center"
-    android:textStyle="bold"
-    android:background="@drawable/circle"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="10dp"
-    android:id="@+id/text_view"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pizza"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="COMFORT FOOD"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/circle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text_view"
 
-    />
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -62,68 +62,68 @@
                 />
         </LinearLayout>
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#fff"
-        android:layout_below="@id/text_vieww"
-        android:layout_margin="12dp"
-        android:id="@+id/text_view1"
-        >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/svg_usersvg"
-            android:padding="10dp"
-            android:background="@color/redcolor"
-            android:tint="#fff"
-            />
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="name"
-            android:textColor="#000"
-            android:textColorHint="#686262"
-            android:background="@null"
-            android:paddingLeft="5dp"
-            android:id="@+id/name_ett"
-            />
-    </LinearLayout>
+            android:background="#fff"
+            android:layout_below="@id/text_vieww"
+            android:layout_margin="12dp"
+            android:id="@+id/text_view1"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/svg_usersvg"
+                android:padding="10dp"
+                android:background="@color/redcolor"
+                android:tint="#fff"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="name"
+                android:textColor="#000"
+                android:textColorHint="#686262"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:id="@+id/name_ett"
+                />
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#fff"
-        android:layout_below="@+id/text_view1"
-        android:layout_margin="15dp"
-        android:id="@+id/text_view3"
-        >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/keyy"
-            android:padding="10dp"
-            android:background="@color/redcolor"
-            />
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="password"
-            android:textColor="#000"
-            android:textColorHint="#686262"
-            android:background="@null"
-            android:paddingLeft="5dp"
-            android:id="@+id/pass_et"
-            />
-    </LinearLayout>
+            android:background="#fff"
+            android:layout_below="@+id/text_view1"
+            android:layout_margin="15dp"
+            android:id="@+id/text_view3"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/keyy"
+                android:padding="10dp"
+                android:background="@color/redcolor"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="password"
+                android:textColor="#000"
+                android:textColorHint="#686262"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:id="@+id/pass_et"
+                />
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#fff"
-        android:layout_below="@+id/text_view3"
-        android:layout_margin="15dp"
-        android:id="@+id/text_view4"
-        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:layout_below="@+id/text_view3"
+            android:layout_margin="15dp"
+            android:id="@+id/text_view4"
+            >
 
             <ImageView
                 android:layout_width="40dp"
@@ -143,7 +143,7 @@
                 android:id="@+id/cpass_et"
                 />
 
-    </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -172,51 +172,13 @@
                 android:paddingLeft="5dp"
                 android:id="@+id/mobile_et"
                 />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/text_view5"
-            android:orientation="horizontal"
-            android:id="@+id/radio_btn_lay"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:weightSum="2"
-
-            android:background="@color/redcolor">
-
-          <RadioGroup
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal">
-
-              <RadioButton
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="sign up as ngo "
-                  android:textStyle="bold"
-                  android:id="@+id/ngo_rb"
-                  />
-
-              <RadioButton
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="sign up as user"
-                  android:textStyle="bold"
-                  android:id="@+id/user_rb"
-                  />
-          </RadioGroup>
-
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/redcolor"
-            android:layout_below="@id/radio_btn_lay"
+            android:layout_below="@id/text_view5"
             android:layout_margin="10dp"
             android:onClick="signup"
             android:gravity="center"

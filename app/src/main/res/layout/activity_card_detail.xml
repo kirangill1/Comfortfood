@@ -50,6 +50,7 @@
                 android:padding="5dp"
                 android:textColor="#000"
                 android:textColorHint="#686262"
+                android:background="@null"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -68,6 +69,7 @@
                 android:padding="5dp"
                 android:textColorHint="#686262"
                 android:textColor="#000"
+                android:background="@null"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -85,6 +87,7 @@
                 android:padding="5dp"
                 android:textColorHint="#686262"
                 android:textColor="#000"
+                android:background="@null"
                 />
 
 

@@ -1,6 +1,7 @@
 package com.example.gursewak.comfortfood;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -72,7 +73,13 @@ public class Admin_login extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("done"))
                     {
+                        SharedPreferences.Editor sp = getSharedPreferences("admin_info" , MODE_PRIVATE).edit();
+                        sp.putString("admin_id",response.getString("admin_id"));
+                        sp.putString("rest_id",response.getString("rest_id"));
+                        sp.commit();
+
                         Intent i = new Intent(Admin_login.this, Admin_Home.class);
+
                         startActivity(i);
 
                         finish();
@@ -115,6 +122,14 @@ public class Admin_login extends AppCompatActivity {
         startActivity(i);
         return;
     }
+
+    public void signup(View v)
+    {
+        Intent i=new Intent(Admin_login.this, Admin_signup.class);
+        startActivity(i);
+        return;
+    }
+
 
 
 

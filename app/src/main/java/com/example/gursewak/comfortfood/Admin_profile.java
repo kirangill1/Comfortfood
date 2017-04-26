@@ -41,8 +41,8 @@ public class Admin_profile extends AppCompatActivity {
         JSONObject job = new JSONObject();
 
         // code to get saved username
-        SharedPreferences sp = getSharedPreferences("user_info" , MODE_PRIVATE);
-        final String username = sp.getString("username" , "");
+        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
+        final String username = sp.getString("admin_id" , "");
 
         try {
             job.put("username_key", username);

@@ -116,13 +116,38 @@
 
   </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/redcolor"
+            android:layout_below="@id/linear_layout"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:onClick="signup"
+            android:clickable="true"
+            android:id="@+id/linear_layout1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIGN UP"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:id="@+id/text_viewsignup"
+                />
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="forget password"
             android:textSize="30dp"
             android:textColor="#000"
-            android:layout_below="@+id/linear_layout"
+            android:layout_below="@+id/linear_layout1"
             android:gravity="center"
             android:textStyle="bold"
             android:clickable="true"
@@ -132,22 +157,7 @@
             android:layout_margin="10dp"
 
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Change password"
-            android:textSize="30dp"
-            android:textColor="#000"
-            android:layout_below="@+id/forget_pass"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:onClick="change_password"
-            android:background="@drawable/roundedrectanle"
-            android:layout_margin="10dp"
 
-
-            />
 
 
 

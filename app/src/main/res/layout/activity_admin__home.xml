@@ -4,8 +4,7 @@
     android:id="@+id/activity_admin__home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-
+    android:background="@drawable/amulticolor"
     tools:context="com.example.gursewak.comfortfood.Admin_Home">
 
     <ScrollView
@@ -29,10 +28,10 @@
         android:layout_alignParentStart="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="#e21b40"
+            android:background="@drawable/circle_purple"
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
@@ -40,8 +39,8 @@
             android:id="@+id/restaurant_details"
             >
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/restaurant_logo"
                 />
 
@@ -49,33 +48,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
                 android:text="RESTAURANT DETAILS"
                 android:id="@+id/restaurant_detail1"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="#509617"
+            android:background="@drawable/circlegreen"
             android:onClick="left_food"
             android:id="@+id/left_overfod">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/menu"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LEFT OVER FOOD"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
                 android:textColor="#fff"
                 android:id="@+id/Menu1"/>
 
@@ -91,10 +92,10 @@
         android:weightSum="2">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="#2735f2"
+            android:background="@drawable/circleblue"
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
@@ -110,26 +111,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MENU"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
                 android:textColor="#fff"
                 android:id="@+id/view_order1"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="#961789"
+            android:background="@drawable/circlepurple"
             android:onClick="view_order"
             android:id="@+id/view_orderr">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/vieworder"
                 android:tint="#fff"
                 />
@@ -138,7 +140,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="VIEW ORDERS"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
                 android:textColor="#fff"
                 android:id="@+id/view_user1"/>
 
@@ -155,9 +158,9 @@
         >
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#22998f"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circlegrreen"
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
@@ -167,23 +170,24 @@
             >
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/feedback"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="VIEW FEEDBACK"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
                 android:textColor="#fff"
                 />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#a90606"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circlered"
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
@@ -193,15 +197,17 @@
 
             >
 
+
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/svg_usersvg"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADMIN PROFILE"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
                 android:textColor="#fff"
                 />
 
@@ -213,41 +219,66 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
+        android:weightSum="2"
         android:layout_below="@+id/feedback_lay"
         android:id="@+id/logoutt"
         >
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#b61267"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circlereddy"
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/layout_change_pass"
+            android:onClick="change_password"
+
+            >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/changepass"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHANGE PASSWORD"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:id="@+id/change_pass"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circlel"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:layout_weight="1"
             android:id="@+id/layout_profile"
             android:onClick="logout"
 
             >
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/logout"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LOGOUT"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="#fff"
+                android:textStyle="bold"
                 android:id="@+id/logout1"/>
 
         </LinearLayout>
-
-
-
-
-
-
 
     </LinearLayout>
 

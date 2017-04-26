@@ -1,6 +1,7 @@
 package com.example.gursewak.comfortfood;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,7 +28,18 @@ public class Menu extends AppCompatActivity {
         get_data();
     }
     public void get_data() {
-        JsonObjectRequest job = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/get_menu.php", new JSONObject(), new Response.Listener<JSONObject>() {
+
+
+        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
+
+         JSONObject jobr = new JSONObject();
+        try {
+            jobr.put("rest_id" ,sp.getString("rest_id","") );
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest job = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/get_menu.php", jobr, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response){
                 try {

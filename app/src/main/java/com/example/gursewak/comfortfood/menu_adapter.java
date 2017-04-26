@@ -2,7 +2,10 @@ package com.example.gursewak.comfortfood;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +44,10 @@ public class menu_adapter extends RecyclerView.Adapter<menu_viewholder> {
 
             holder.item_name.setText(job.getString("Item_name"));
             holder.price.setText(job.getString("Price"));
+            holder.item_type.setText(job.getString("item_type"));
+
+            Bitmap bmp = StringToBitMap(job.getString("image"));
+            holder.i.setImageBitmap(bmp);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -51,5 +58,16 @@ public class menu_adapter extends RecyclerView.Adapter<menu_viewholder> {
     @Override
     public int getItemCount() {
         return json.length();
+    }
+
+    public Bitmap StringToBitMap(String encodedString){
+        try {
+            byte [] encodeByte= Base64.decode(encodedString,Base64.DEFAULT);
+            Bitmap bitmap= BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+            return bitmap;
+        } catch(Exception e) {
+            e.getMessage();
+            return null;
+        }
     }
 }

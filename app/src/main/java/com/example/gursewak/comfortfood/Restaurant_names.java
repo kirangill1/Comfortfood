@@ -98,6 +98,13 @@ public class Restaurant_names extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void change_password(View v)
+    {
+        Intent i = new Intent(Restaurant_names.this,userchange_pass.class);
+        startActivity(i);
+        return;
+    }
+
     public void  logoutt(View v)
     {
         finish();

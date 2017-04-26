@@ -1,6 +1,7 @@
 package com.example.gursewak.comfortfood;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -54,6 +57,70 @@ public class Change_password extends AppCompatActivity {
             Toast.makeText(Change_password.this, "enter the confirm password", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        if (!new_pass.equals(confirm_pass)) {
+            Toast.makeText(Change_password.this, "password does not match", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        JSONObject job = new JSONObject();
+
+        // code to get saved username
+        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
+        final String admin_id = sp.getString("admin_id" , "");
+
+        try {
+            job.put("previouspass", previous_pass);
+            job.put("newpass" , new_pass);
+            job.put("admin_id",admin_id);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        System.out.println(job);
+
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/change_password.php", job, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                System.out.println(response);
+
+                try {
+                    if(response.getString("key").equals("done"))
+                    {
+
+                        Toast.makeText(Change_password.this , "restaurant detail added succesfully" , Toast.LENGTH_SHORT).show();
+
+
+
+
+                        finish();
+                    }
+
+                    if(response.getString("key").equals("restaurant exist"))
+                    {
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(error);
+
+            }
+        });
+
+        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 , 2));
+
+        AppController app = new AppController(Change_password.this);
+
+        app.addToRequestQueue(jobreq);
 
     }
 }

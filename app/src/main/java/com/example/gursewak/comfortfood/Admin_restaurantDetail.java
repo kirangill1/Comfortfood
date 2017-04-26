@@ -83,11 +83,11 @@ public class Admin_restaurantDetail extends AppCompatActivity {
         JSONObject job = new JSONObject();
 
         // code to get saved username
-        SharedPreferences sp = getSharedPreferences("user_info" , MODE_PRIVATE);
-        final String username = sp.getString("username" , "");
+        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
+        final String admin_id = sp.getString("admin_id" , "");
 
         try {
-            job.put("username_key", username);
+            job.put("admin_id", admin_id);
             job.put("rest_name" , rest_name);
             job.put("address",address);
             job.put("city",city);
@@ -111,6 +111,10 @@ public class Admin_restaurantDetail extends AppCompatActivity {
 
                         Toast.makeText(Admin_restaurantDetail.this , "restaurant detail added succesfully" , Toast.LENGTH_SHORT).show();
 
+                        SharedPreferences.Editor sp = getSharedPreferences("admin_info" , MODE_PRIVATE).edit();
+
+                        sp.putString("rest_id",response.getString("rest_id"));
+                        sp.commit();
 
 
 

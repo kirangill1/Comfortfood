@@ -65,5 +65,10 @@ public class Admin_Home extends AppCompatActivity {
         finish();
     }
 
+    public void change_password(View view) {
+
+        Intent i = new Intent(Admin_Home.this , Change_password.class);
+        startActivity(i);
     }
+}
 

@@ -15,15 +15,16 @@ import static com.example.gursewak.comfortfood.R.id.restaurant_name;
 
 public class menu_viewholder extends RecyclerView.ViewHolder {
     ImageView i;
-    TextView item_name, price;
+    TextView item_name, price,item_type;
 
     public menu_viewholder(View itemView) {
         super(itemView);
 
 
-        i = (ImageView)itemView.findViewById(R.id.piza);
+        i = (ImageView)itemView.findViewById(R.id.menu_image);
         item_name= (TextView)itemView.findViewById(R.id.rest_name);
         price = (TextView)itemView.findViewById(R.id.price);
+        item_type = (TextView)itemView.findViewById(R.id.typpe);
 
     }
 
