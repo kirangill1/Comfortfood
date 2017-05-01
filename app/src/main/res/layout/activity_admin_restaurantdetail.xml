@@ -13,10 +13,13 @@
         android:background="@drawable/pinkie"
         android:scaleType="centerCrop"
         />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -121,35 +124,41 @@
                 />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/roundedrectanle"
             android:layout_margin="10dp"
-            android:layout_below="@+id/restaurant_5"
-            android:id="@+id/add"
+            android:layout_below="@id/restaurant_5"
+            android:id="@+id/restaurant_6"
             >
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:hint="Pick up order time "
+                android:hint="Discount"
                 android:textColorHint="#686262"
+                android:inputType="number"
+                android:maxLength="2"
                 android:textColor="#000"
                 android:background="@null"
                 android:layout_marginLeft="3dp"
-                android:id="@+id/pickup_"
+                android:id="@+id/discount"
                 android:padding="7dp"
                 />
+
         </LinearLayout>
 
         <Button
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:layout_below="@+id/add"
+            android:layout_below="@+id/restaurant_6"
             android:background="#fc0273"
             android:layout_margin="15dp"
             android:layout_centerHorizontal="true"
             android:text="ADD"
+            android:id="@+id/add_btn"
             android:onClick="add_details"
             android:textSize="40dp"
             android:textStyle="bold"

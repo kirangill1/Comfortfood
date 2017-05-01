@@ -25,8 +25,6 @@ public class Profile extends AppCompatActivity {
     private EditText address;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/restaurant_name_layout"
     android:background="@drawable/roundedrectanle"
-    android:layout_margin="15dp">
+    android:layout_margin="10dp">
 
 
     <LinearLayout
@@ -18,7 +18,9 @@
         android:layout_height="wrap_content"
         android:text="RESTAURANT NAME"
         android:textSize="20dp"
+        android:layout_marginLeft="3dp"
         android:textColor="@color/redcolor"
+        android:layout_marginTop="3dp"
         android:textStyle="bold"
         android:id="@+id/restaurant_name"
 
@@ -36,6 +38,7 @@
             android:text="ADDRESS"
             android:textSize="20dp"
             android:textColor="@color/redcolor"
+            android:layout_marginLeft="3dp"
             android:textStyle="bold"
             android:id="@+id/addresss"
             />
@@ -49,6 +52,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
             android:text="CITY"
             android:textSize="20dp"
             android:textColor="@color/redcolor"
@@ -65,11 +69,30 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
             android:text="TYPE"
             android:textStyle="bold"
             android:textColor="@color/redcolor"
             android:textSize="20dp"
             android:id="@+id/typee"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="DISCOUNT"
+            android:textStyle="bold"
+            android:textColor="@color/redcolor"
+            android:textSize="20dp"
+            android:id="@+id/discount"
             />
     </LinearLayout>
 

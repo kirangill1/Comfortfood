@@ -124,6 +124,7 @@
                     android:hint="Mobile no"
                     android:textColor="#000"
                     android:textColorHint="#686262"
+                    android:inputType="number"
                     android:background="@null"
                     android:layout_toRightOf="@+id/mobile_no"
                     android:id="@+id/mobile_Et"
@@ -158,6 +159,7 @@
                     android:textColor="#000"
                     android:textColorHint="#686262"
                     android:background="@null"
+
                     android:layout_toRightOf="@id/name_ET"
                     android:id="@+id/email_Et"
                     android:padding="5dp"

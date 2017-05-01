@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_user_viewmenu"
+    android:id="@+id/activity_admin_addmenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="com.example.gursewak.comfortfood.User_viewmenu">
-
+    tools:context="com.example.gursewak.comfortfood.admin_addmenu"
+    >
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,36 +35,13 @@
                 android:layout_marginTop="5dp"
                 android:id="@+id/text_view"
                 />
-            <Button
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#0c3ec6"
-                android:layout_centerHorizontal="true"
-                android:text="NEXT"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#82acf2"
-                android:onClick="check_outt"
-                android:layout_toRightOf="@+id/text_view"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="40dp"
-
-
                 />
-            <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/rest_menu_recycler"
-                android:layout_below="@+id/text_view"
-                >
-
-            </android.support.v7.widget.RecyclerView>
 
 
-
-
-        </RelativeLayout>
-    </ScrollView>
 </RelativeLayout>
-
-
+        </ScrollView>
+    </RelativeLayout>

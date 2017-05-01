@@ -2,32 +2,31 @@ package com.example.gursewak.comfortfood;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import static com.example.gursewak.comfortfood.R.id.restaurant_name;
-
-
 /**
- * Created by gursewak on 4/20/2017.
+ * Created by gursewak on 4/26/2017.
  */
 
-public class menu_viewholder extends RecyclerView.ViewHolder {
+public class left_over_view_holder extends RecyclerView.ViewHolder {
     ImageView i;
-    TextView item_name, price, item_qty ,item_type;
+    TextView item_name, price,item_type;
 
-    public menu_viewholder(View itemView) {
+    CheckBox left_food_check ;
+
+    public left_over_view_holder(View itemView) {
         super(itemView);
 
 
         i = (ImageView)itemView.findViewById(R.id.menu_image);
         item_name= (TextView)itemView.findViewById(R.id.rest_name);
         price = (TextView)itemView.findViewById(R.id.price);
-        item_qty = (TextView)itemView.findViewById(R.id.item_qty);
         item_type = (TextView)itemView.findViewById(R.id.typpe);
 
-    }
+        left_food_check = (CheckBox) itemView.findViewById(R.id.left_food_check);
 
     }
 
+}

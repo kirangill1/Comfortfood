@@ -36,16 +36,22 @@ public class restaurantadapter extends RecyclerView.Adapter<restaurant_viewholde
     public void onBindViewHolder(restaurant_viewholder holder, int position) {
 
         try {
-            JSONObject job = json.getJSONObject(position);
+            final JSONObject job = json.getJSONObject(position);
 
             holder.restaurant_name.setText(job.getString("name"));
             holder.city.setText(job.getString("City"));
             holder.address.setText(job.getString("Address"));
             holder.type.setText(job.getString("food_type"));
+            holder.discount.setText(job.getString("discount"));
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(activity,User_viewmenu.class);
+                    try {
+                        i.putExtra("rest_id",job.getString("Rid"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
                     activity.startActivity(i);
 

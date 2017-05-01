@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class restaurant_viewholder extends RecyclerView.ViewHolder {
 
-    TextView restaurant_name,address,city,type;
+    TextView restaurant_name,address,city,type,discount;
     LinearLayout layout;
 
     public restaurant_viewholder(View itemView) {
@@ -23,6 +23,7 @@ public class restaurant_viewholder extends RecyclerView.ViewHolder {
         address = (TextView)itemView.findViewById(R.id.addresss);
         city = (TextView)itemView.findViewById(R.id.cityy);
         type = (TextView)itemView.findViewById(R.id.typee);
+        discount = (TextView)itemView.findViewById(R.id.discount);
 
     }
 }

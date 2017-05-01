@@ -66,39 +66,35 @@ public class Change_password extends AppCompatActivity {
         JSONObject job = new JSONObject();
 
         // code to get saved username
-        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
-        final String admin_id = sp.getString("admin_id" , "");
+        SharedPreferences sp = getSharedPreferences("admin_info", MODE_PRIVATE);
+        final String admin_id = sp.getString("admin_id", "");
 
         try {
             job.put("previouspass", previous_pass);
-            job.put("newpass" , new_pass);
-            job.put("admin_id",admin_id);
+            job.put("newpass", new_pass);
+            job.put("admin_id", admin_id);
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
         System.out.println(job);
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/change_password.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://" + Internet.ip + "/comfort_food/change_password.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 System.out.println(response);
 
                 try {
-                    if(response.getString("key").equals("done"))
-                    {
+                    if (response.getString("key").equals("done")) {
 
-                        Toast.makeText(Change_password.this , "restaurant detail added succesfully" , Toast.LENGTH_SHORT).show();
-
-
+                        Toast.makeText(Change_password.this, "restaurant detail added succesfully", Toast.LENGTH_SHORT).show();
 
 
                         finish();
                     }
 
-                    if(response.getString("key").equals("restaurant exist"))
-                    {
+                    if (response.getString("key").equals("restaurant exist")) {
                     }
 
 
@@ -116,12 +112,20 @@ public class Change_password extends AppCompatActivity {
             }
         });
 
-        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 , 2));
+        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000, 2, 2));
 
         AppController app = new AppController(Change_password.this);
 
         app.addToRequestQueue(jobreq);
+    }
+
+
+        public void update(View v)
+        {
+            Intent i = new Intent(Change_password.this ,HomeActivity.class);
+            startActivity(i);
+            return;
+        }
 
     }
-}
 

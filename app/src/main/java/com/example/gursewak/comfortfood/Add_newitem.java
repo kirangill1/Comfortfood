@@ -46,6 +46,7 @@ public class Add_newitem extends AppCompatActivity {
         item_price = (EditText)findViewById(R.id.item_pricee);
         item_type = (EditText)findViewById(R.id.item_typee);
 
+
         menu_img = (ImageView) findViewById(R.id.menu_image);
     }
 
@@ -59,6 +60,7 @@ public class Add_newitem extends AppCompatActivity {
             job.put("item_name" , item_name.getText().toString());
             job.put("item_price" , item_price.getText().toString());
             job.put("item_type", item_type.getText().toString());
+
             job.put("image" , menu_image_string);
         } catch (JSONException e) {
             e.printStackTrace();

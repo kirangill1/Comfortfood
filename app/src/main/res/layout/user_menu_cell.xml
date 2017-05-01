@@ -25,40 +25,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PIZZA"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="1dp"
-            android:id="@+id/rest_name"
-
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price: "
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:id="@+id/price"
-            android:layout_marginLeft="10dp"
-            />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Qty: "
+                android:text="PIZZA"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:id="@+id/rest_name"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: 80"
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:id="@+id/qty"
-                android:layout_marginLeft="10dp"/>
-
-
+                android:id="@+id/price"
+                android:layout_marginLeft="10dp"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,9 +56,19 @@
                 android:id="@+id/typpe"
                 android:textSize="20dp"
                 android:layout_marginLeft="10dp"/>
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:background="@drawable/cirrcle"
+        android:id="@+id/add_btn"
+        android:layout_gravity="right"
+        />
 
 </LinearLayout>

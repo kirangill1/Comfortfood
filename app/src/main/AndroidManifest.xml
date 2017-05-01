@@ -3,9 +3,8 @@
     package="com.example.gursewak.comfortfood">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -59,6 +58,8 @@
         <activity android:name=".userchange_pass" />
         <activity android:name=".Admin_signup" />
         <activity android:name=".No_leftfood" />
+        <activity android:name=".admin_addmenu" />
+        <activity android:name=".Left_over_menu" />
     </application>
 
 </manifest>
