@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_restaurant__detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gursewak.comfortfood.Admin_restaurantDetail">
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientt"
+        android:scaleType="centerCrop"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="150dp"
+                android:text="RESTAURANT DETAIL"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/circlegreengrad"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/text_view"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/ciclegreen"
+                android:layout_margin="10dp"
+                android:layout_below="@id/text_view"
+                android:id="@+id/restaurant_2"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Restaurant name"
+                    android:textColorHint="#686262"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/restaurantname_"
+                    android:padding="1dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ciclegreen"
+                android:layout_margin="10dp"
+                android:layout_below="@id/restaurant_2"
+                android:id="@+id/restaurant_3"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Address"
+                    android:textColorHint="#686262"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/address_"
+                    android:padding="1dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ciclegreen"
+                android:layout_margin="10dp"
+                android:layout_below="@id/restaurant_3"
+                android:id="@+id/restaurant_4"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City:"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="City"
+                    android:textColorHint="#686262"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/city_"
+                    android:padding="1dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ciclegreen"
+                android:layout_margin="10dp"
+                android:layout_below="@id/restaurant_4"
+                android:id="@+id/restaurant_5"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foodtype:"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Food type"
+                    android:textColorHint="#686262"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/foodtype_"
+                    android:padding="1dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ciclegreen"
+                android:layout_margin="10dp"
+                android:layout_below="@id/restaurant_5"
+                android:id="@+id/restaurant_6"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discount:"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Discount"
+                    android:textColorHint="#686262"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/discount"
+                    android:padding="1dp"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/restaurant_6"
+                android:background="@drawable/ciclegreen"
+                android:layout_margin="15dp"
+                android:layout_centerHorizontal="true"
+                android:text="ADD"
+                android:id="@+id/add_btn"
+                android:onClick="add_details"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
+

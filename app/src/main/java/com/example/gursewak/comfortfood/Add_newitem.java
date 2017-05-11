@@ -31,11 +31,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Add_newitem extends AppCompatActivity {
-    public EditText item_name,item_price, item_type;
+    public EditText item_name,item_price, item_type, item_qty;
 
     public ImageView menu_img ;
 
-    String menu_image_string;
+    String menu_image_string = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class Add_newitem extends AppCompatActivity {
         item_name = (EditText) findViewById(R.id.item_namee);
         item_price = (EditText)findViewById(R.id.item_pricee);
         item_type = (EditText)findViewById(R.id.item_typee);
+        item_qty = (EditText)findViewById(R.id.item_qty);
 
 
         menu_img = (ImageView) findViewById(R.id.menu_image);
@@ -56,12 +57,14 @@ public class Add_newitem extends AppCompatActivity {
         final String admin_id = sp.getString("admin_id" , "");
         JSONObject  job = new JSONObject();
         try {
+
             job.put("rest_id" ,admin_id );
             job.put("item_name" , item_name.getText().toString());
             job.put("item_price" , item_price.getText().toString());
             job.put("item_type", item_type.getText().toString());
-
+            job.put("item_qty", item_qty.getText().toString());
             job.put("image" , menu_image_string);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -78,17 +81,14 @@ public class Add_newitem extends AppCompatActivity {
                     if(response.getString("key").equals("done"))
                     {
 
-                        Toast.makeText(Add_newitem.this , "restaurant detail added succesfully" , Toast.LENGTH_SHORT).show();
-
-
-
+                        Toast.makeText(Add_newitem.this , "item added succesfully" , Toast.LENGTH_SHORT).show();
 
                         finish();
                     }
 
                     if(response.getString("key").equals("restaurant exist"))
                     {
-                        Toast.makeText(Add_newitem.this , "restaurant already exist" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Add_newitem.this , "item already exist" , Toast.LENGTH_SHORT).show();
                     }
 
 

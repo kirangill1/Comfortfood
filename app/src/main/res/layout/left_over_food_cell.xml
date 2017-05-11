@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/menu_show"
-    android:background="#3b64e1"
+    android:background="#1fb6b6"
     android:layout_margin="10dp"
     >
 

@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bluee"
+        android:src="@drawable/gradientt"
         android:scaleType="centerCrop"
         />
     <ScrollView
@@ -21,8 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
-
             <TextView
                 android:layout_width="130dp"
                 android:layout_height="130dp"
@@ -31,27 +29,12 @@
                 android:textColor="#fff"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/bluecircle"
+                android:background="@drawable/circlegreengrad"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:id="@+id/text_view"
                 />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#0c3ec6"
-                android:layout_centerHorizontal="true"
-                android:text="NEXT"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#82acf2"
-                android:onClick="check_outt"
-                android:layout_toRightOf="@+id/text_view"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="40dp"
 
-
-                />
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -66,6 +49,37 @@
 
         </RelativeLayout>
     </ScrollView>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:text="0"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/circlegreengrad"
+        android:textSize="20dp"
+        android:id="@+id/counter_text"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circlegreengrad"
+        android:layout_centerHorizontal="true"
+        android:text="NEXT"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:onClick="check_outt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        />
 </RelativeLayout>
 
 

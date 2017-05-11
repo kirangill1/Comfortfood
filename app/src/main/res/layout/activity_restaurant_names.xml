@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/reddy"
+        android:src="@drawable/gradientt"
         android:scaleType="centerCrop"/>
     <ScrollView
         android:layout_width="match_parent"
@@ -20,10 +20,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
-
+        android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="40dp"
@@ -40,7 +37,7 @@
                android:textColor="#fff"
                android:gravity="center"
                android:textStyle="bold"
-               android:background="@drawable/circle"
+               android:background="@drawable/circlegreengrad"
                android:layout_centerHorizontal="true"
                android:layout_marginTop="10dp"
                android:id="@+id/text_view"
@@ -52,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rest_names_recycler"
+            android:background="@android:color/transparent"
             android:layout_below="@+id/text_view">
 
         </android.support.v7.widget.RecyclerView>
@@ -72,38 +70,58 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:background="@drawable/reddy">
-
+        android:background="@drawable/gradientt"
+        >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/first_lyout"
-            android:gravity="left"
+           android:gravity="left"
+            android:layout_marginTop="20dp"
             />
-
-
         <TextView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:text="COMFORT FOOD"
-            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account centre"
             android:textColor="#fff"
-            android:gravity="center"
             android:textStyle="bold"
-            android:background="@drawable/circle"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:id="@+id/text_view2"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:id="@+id/account"
             />
-
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/ciclegreen"
+            android:layout_margin="10dp"
+            android:onClick="share"
+            android:clickable="true"
+            android:layout_below="@+id/account"
+            android:id="@+id/text_view2"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/share"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Share App"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_margin="9dp"
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#fff"
-            android:layout_margin="20dp"
+            android:background="@drawable/ciclegreen"
+            android:layout_margin="10dp"
             android:id="@+id/profile_"
             android:onClick="profile"
             android:clickable="true"
@@ -115,7 +133,7 @@
                 android:src="@drawable/uuser"
                 android:padding="5dp"
                 android:id="@+id/usser"
-                android:tint="#e60f0f"
+
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -131,24 +149,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#fff"
+            android:background="@drawable/ciclegreen"
             android:layout_below="@+id/profile_"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:id="@+id/order_"
             android:onClick="order"
             android:clickable="true"
             >
-
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/orderr"
                 android:id="@+id/order"
-                android:tint="#e60f0f"
-                android:padding="5dp"
+                android:padding="7dp"
                 />
-
-            <TextView
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Orders"
@@ -163,24 +178,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#fff"
+            android:background="@drawable/ciclegreen"
             android:layout_below="@+id/order_"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:id="@+id/feedback_"
             android:onClick="feedback"
             android:clickable="true"
-
             >
-
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/feedbackk"
                 android:id="@+id/feedback"
-                android:tint="#e60f0f"
                 android:padding="5dp"
-                android:background="#fff"
-
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -196,9 +206,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#fff"
+            android:background="@drawable/ciclegreen"
             android:layout_below="@+id/feedback_"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:id="@+id/change_pas"
             android:gravity="center_vertical"
             android:onClick="change_password"
@@ -209,10 +219,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/changepass"
                 android:id="@+id/changepas"
-                android:tint="#e60f0f"
-                android:padding="5dp"
-                android:background="#fff"
-
+                android:padding="7dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -225,18 +232,48 @@
                 />
         </LinearLayout>
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:background="@drawable/ciclegreen"
             android:layout_below="@+id/change_pas"
-            android:layout_margin="39dp"
-            android:background="@color/redcolor"
+            android:layout_margin="10dp"
+            android:id="@+id/rating"
+            android:gravity="center_vertical"
+            android:onClick="rating"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/star"
+                android:id="@+id/rate"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="9dp"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rating"
+            android:layout_margin="10dp"
+            android:background="@drawable/ciclegreen"
             android:text="LOGOUT"
-            android:textColor="#fff"
+            android:textColor="#15b5ca"
             android:textStyle="bold"
             android:textSize="35dp"
             android:onClick="logoutt"
             android:clickable="true"
+            android:gravity="center"
             />
 
 

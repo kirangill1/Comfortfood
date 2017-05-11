@@ -20,7 +20,7 @@ public class Admin_onetmpswrd extends AppCompatActivity {
 
         otp_et = (EditText) findViewById(R.id.otp_et);
 
-         mobile  = getIntent().getStringExtra("phone_key");
+         mobile  = getIntent().getStringExtra("mobile_key");
 
         pin = getIntent().getStringExtra("pin_key");
 
@@ -40,11 +40,6 @@ public class Admin_onetmpswrd extends AppCompatActivity {
             i.putExtra("mobile_key", mobile);
             startActivity(i);
             finish();
-
-
-
-
-
         }
         else {
             Toast.makeText(Admin_onetmpswrd.this,"code do not match", Toast.LENGTH_SHORT).show();

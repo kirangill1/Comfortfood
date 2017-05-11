@@ -9,7 +9,10 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -31,7 +34,7 @@
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/circle_purple"
+            android:background="@drawable/circlereddy"
             android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="vertical"
@@ -39,8 +42,8 @@
             android:id="@+id/restaurant_details"
             >
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/restaurant_logo"
                 />
 
@@ -49,8 +52,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:text="RESTAURANT DETAILS"
+                android:layout_marginTop="4dp"
+                android:text="RESTAURANT DETAIL"
                 android:id="@+id/restaurant_detail1"/>
 
         </LinearLayout>
@@ -187,7 +190,7 @@
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:background="@drawable/circlered"
+            android:background="@drawable/cicleblui"
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
@@ -196,12 +199,11 @@
             android:id="@+id/admin_profile"
 
             >
-
-
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/svg_usersvg"/>
+                android:src="@drawable/svg_usersvg"
+                android:id="@+id/imageView" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -212,8 +214,7 @@
                 />
 
         </LinearLayout>
-
-            </LinearLayout>
+   </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -227,7 +228,7 @@
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:background="@drawable/circlereddy"
+            android:background="@drawable/ciclelgtblu"
             android:orientation="vertical"
             android:layout_margin="2dp"
             android:gravity="center"
@@ -238,14 +239,14 @@
             >
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/changepass"/>
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/changpass"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CHANGE PASSWORD"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="4dp"
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:id="@+id/change_pass"/>

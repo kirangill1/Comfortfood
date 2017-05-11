@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:weightSum="3"
+    android:padding="10dp"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/ccircle"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ITEM NAME"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#1fb6b6"
+        android:layout_margin="9dp"
+        android:layout_weight="1"
+        android:id="@+id/item_name_id"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QTY"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:layout_margin="9dp"
+        android:id="@+id/item_qty_id"
+        android:textColor="#1fb6b6"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PER PRICE"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_margin="9dp"
+        android:layout_weight="1"
+        android:id="@+id/item_price_id"
+        android:textColor="#1fb6b6"/>
+
+    </LinearLayout>
+</RelativeLayout>

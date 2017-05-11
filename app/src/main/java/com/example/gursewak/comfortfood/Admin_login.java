@@ -17,7 +17,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Admin_login extends AppCompatActivity {
+public class
+Admin_login extends AppCompatActivity {
     private EditText username_et;
     private EditText password_et;
     private TextView login_et;
@@ -40,15 +41,19 @@ public class Admin_login extends AppCompatActivity {
         String pass = password_et.getText().toString();
 
 
+        String pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[!@#$%^&*+=?-]).{8,15}$";
 
-        if(name.equals(""))
+
+         if(name.length() < 4 || !name.matches("[a-zA-Z ]+"))
         {
-            Toast.makeText(Admin_login.this, "enter the name", Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(Admin_login.this, "name must be 4 character long and not contain any digits", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(pass.length()<8)
+
+        if (!pass.matches(pattern) || pass.length() < 8)
         {
-            Toast.makeText(Admin_login.this, "enter atleast 8 digit password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Admin_login.this, "password must contain atleast one alphabet , digit , special character and length must be 8 character", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -123,10 +128,4 @@ public class Admin_login extends AppCompatActivity {
         startActivity(i);
         return;
     }
-
-
-
-
-
-
 }

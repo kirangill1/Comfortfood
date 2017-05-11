@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class user_menu_view_holder extends RecyclerView.ViewHolder {
     ImageView i;
-    TextView item_name, price,item_type;
+    TextView item_name, price,item_type,item_qty;
 
     Button add_item;
 
@@ -27,6 +27,7 @@ public class user_menu_view_holder extends RecyclerView.ViewHolder {
         item_name= (TextView)itemView.findViewById(R.id.rest_name);
         price = (TextView)itemView.findViewById(R.id.price);
         item_type = (TextView)itemView.findViewById(R.id.typpe);
+        item_qty = (TextView)itemView.findViewById(R.id.qty);
 
         add_item  = (Button)  itemView.findViewById(R.id.add_btn);
 

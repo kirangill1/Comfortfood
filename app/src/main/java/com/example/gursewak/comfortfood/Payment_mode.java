@@ -15,15 +15,17 @@ public class Payment_mode extends AppCompatActivity {
     public void online_pay(View v)
     {
         Intent i = new Intent(Payment_mode.this,Card_detail.class);
+        i.putExtra("rest_id" , getIntent().getStringExtra("rest_id"));
         startActivity(i);
-        return;
+        finish();
     }
 
     public void pay_pickup(View v)
     {
-        Intent i = new Intent(Payment_mode.this,Admin_vieworder.Order_configuration.class);
+        Intent i = new Intent(Payment_mode.this, Order_confirmation.class);
+        i.putExtra("rest_id" , getIntent().getStringExtra("rest_id"));
         startActivity(i);
-        return;
+        finish();
 
     }
 }

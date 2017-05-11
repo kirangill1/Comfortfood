@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ccircle"
+    android:layout_margin="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:textSize="20dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#1fb6b6"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:id="@+id/name_tv"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            android:textSize="20dp"
+            android:textColor="#1fb6b6"
+            android:layout_marginLeft="3dp"
+            android:textStyle="bold"
+            android:id="@+id/date_tv"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="MESSAGE"
+            android:textSize="20dp"
+            android:textColor="#1fb6b6"
+            android:textStyle="bold"
+            android:id="@+id/message_tv"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

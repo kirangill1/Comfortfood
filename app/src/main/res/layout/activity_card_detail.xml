@@ -9,104 +9,113 @@
     <ImageView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:src="@drawable/gren"
+    android:src="@drawable/gradientt"
     android:scaleType="centerCrop"
     />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:text="CARD DETAIL"
+    android:textSize="25dp"
+    android:textColor="#fff"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:background="@drawable/circlegreengrad"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:id="@+id/text_view"
+    android:layout_marginBottom="10dp"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_view"
+        android:background="@drawable/ciclegreen"
+        android:layout_margin="15dp"
+        android:id="@+id/item_name"
         >
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:text="PAYMENT"
-            android:textSize="25dp"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:background="@drawable/greenn"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:id="@+id/text_view"
-            android:layout_marginBottom="30dp"
-            />
-
-        <RelativeLayout
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/text_view"
-           android:background="@drawable/roundedrectngle"
-            android:layout_margin="15dp"
+            android:hint="Card number"
+            android:textColorHint="#686262"
+            android:layout_margin="5dp"
+            android:textColor="#000"
             android:id="@+id/card_number"
-            >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Card number"
-                android:padding="5dp"
-                android:textColor="#000"
-                android:textColorHint="#686262"
-                android:background="@null"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/card_number"
-            android:layout_margin="15dp"
-            android:background="@drawable/roundedrectngle"
-            android:id="@+id/number"
-
-            >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="C u u number"
-                android:padding="5dp"
-                android:textColorHint="#686262"
-                android:textColor="#000"
-                android:background="@null"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/number"
-            android:layout_margin="15dp"
-            android:background="@drawable/roundedrectngle"
-            android:id="@+id/go"
-            >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Expirey date"
-                android:padding="5dp"
-                android:textColorHint="#686262"
-                android:textColor="#000"
-                android:background="@null"
-                />
-
-
-        </RelativeLayout>
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_below="@+id/go"
-            android:background="#3f972d"
-            android:layout_margin="15dp"
-            android:layout_centerHorizontal="true"
-            android:text="ADD"
-            android:textSize="40dp"
-            android:textStyle="bold"
-            android:textColor="#8fe483"
-
+            android:background="@null"
+            android:padding="3dp"
             />
-
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/item_name"
+        android:background="@drawable/ciclegreen"
+        android:layout_margin="15dp"
+        android:id="@+id/item_price"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="C u u number"
+            android:textColorHint="#686262"
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:inputType="number"
+            android:background="@null"
+            android:padding="3dp"
+            android:id="@+id/ccu_number"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/item_price"
+        android:background="@drawable/ciclegreen"
+        android:layout_margin="15dp"
+        android:id="@+id/item_qty_lay"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Expirey date"
+            android:textColorHint="#686262"
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:background="@null"
+            android:inputType="number"
+            android:padding="3dp"
+            android:id="@+id/expirey"
+            />
+    </RelativeLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/item_qty_lay"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:onClick="confirm_order"
+        android:clickable="true"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/send"
+
+        android:layout_gravity="center"
+        android:background="@drawable/ciclegreen"/>
+
+</RelativeLayout>
 </ScrollView>
 </RelativeLayout>

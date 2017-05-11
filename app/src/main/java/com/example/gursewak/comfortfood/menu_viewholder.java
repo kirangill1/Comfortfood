@@ -24,7 +24,7 @@ public class menu_viewholder extends RecyclerView.ViewHolder {
         i = (ImageView)itemView.findViewById(R.id.menu_image);
         item_name= (TextView)itemView.findViewById(R.id.rest_name);
         price = (TextView)itemView.findViewById(R.id.price);
-        item_qty = (TextView)itemView.findViewById(R.id.item_qty);
+        item_qty = (TextView)itemView.findViewById(R.id.qty);
         item_type = (TextView)itemView.findViewById(R.id.typpe);
 
     }

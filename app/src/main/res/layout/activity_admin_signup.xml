@@ -110,6 +110,7 @@
                 android:hint="password"
                 android:textColor="#000"
                 android:textColorHint="#686262"
+                android:inputType="textPassword"
                 android:background="@null"
                 android:paddingLeft="5dp"
                 android:id="@+id/pass_et"
@@ -139,6 +140,7 @@
                 android:textColor="#000"
                 android:textColorHint="#686262"
                 android:background="@null"
+                android:inputType="textPassword"
                 android:paddingLeft="5dp"
                 android:id="@+id/cpass_et"
                 />

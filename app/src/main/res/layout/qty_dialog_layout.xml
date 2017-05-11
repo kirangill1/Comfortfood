@@ -42,7 +42,7 @@
             android:text="DONE"
             android:textColor="#fff"
             android:textSize="15dp"
-            android:background="@drawable/circlblue"
+            android:background="@drawable/circlegreengrad"
             android:layout_margin="5dp"
             android:id="@+id/done_btn"
             android:layout_marginTop="10dp"/>
@@ -53,7 +53,7 @@
             android:layout_gravity="center"
             android:text="CANCEL"
             android:textColor="#fff"
-            android:background="@drawable/circlblue"
+            android:background="@drawable/circlegreengrad"
             android:textSize="15dp"
             android:layout_margin="5dp"
             android:id="@+id/cancel_btn"

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order_configuration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gradientt"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:text="VOILLA!"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/circlegreengrad"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/text_view"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Your order placed successfully"
+            android:layout_centerInParent="true"
+            android:textSize="50dp"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+</RelativeLayout>

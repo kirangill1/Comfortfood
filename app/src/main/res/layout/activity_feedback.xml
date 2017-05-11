@@ -9,9 +9,12 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/seagren"
+        android:src="@drawable/gradientt"
         android:scaleType="centerCrop"
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,11 +27,75 @@
             android:textColor="#fff"
             android:gravity="center"
             android:textStyle="bold"
-            android:background="@drawable/seagrncircle"
+            android:background="@drawable/circlegreengrad"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
             android:id="@+id/text_view"
             />
-    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/text_view"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Name"
+            android:textColorHint="#fff"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/ciclegreen"
+            android:inputType="textPersonName"
+            android:id="@+id/name__"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Date"
+            android:textColorHint="#fff"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/ciclegreen"
+            android:id="@+id/date__"
+            android:onClick="select_date"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Message"
+            android:textColorHint="#fff"
+            android:padding="10dp"
+            android:layout_margin="12dp"
+            android:gravity="start"
+            android:textColor="#000"
+            android:background="@drawable/ciclegreen"
+            android:inputType="text"
+            android:id="@+id/message__"
+            />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="SEND"
+            android:textColor="#fff"
+            android:onClick="send_data"
+            android:clickable="true"
+            android:textSize="30dp"
+            android:id="@+id/send"
+            android:layout_gravity="center"
+            android:background="@drawable/ciclegreen"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

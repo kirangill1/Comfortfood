@@ -60,6 +60,11 @@
         <activity android:name=".No_leftfood" />
         <activity android:name=".admin_addmenu" />
         <activity android:name=".Left_over_menu" />
+        <activity android:name=".Adminfeedback" />
+        <activity android:name=".Order_review" />
+        <activity android:name=".Order_confirmation" />
+        <activity android:name=".User_view_order" />
+        <activity android:name=".maina_ip"></activity>
     </application>
 
 </manifest>

@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/green"
+        android:src="@drawable/gradientt"
         android:scaleType="centerCrop"
         />
 
@@ -36,7 +36,7 @@
                 android:textColor="#fff"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/circlegreen"
+                android:background="@drawable/circlegreengrad"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:id="@+id/text_view"

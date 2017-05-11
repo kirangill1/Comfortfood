@@ -30,13 +30,13 @@ public class Change_password extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        previous_et = (EditText) findViewById(R.id.passwrd_et);
+        previous_et = (EditText) findViewById(R.id.previous_et);
         newpass_et = (EditText) findViewById(R.id.new_et);
         confirmpass_et = (EditText) findViewById(R.id.confirm_et);
 
     }
 
-    public void add_detail(View v) {
+    public void update(View v) {
 
         String previous_pass = previous_et.getText().toString();
         String new_pass = newpass_et.getText().toString();
@@ -79,7 +79,7 @@ public class Change_password extends AppCompatActivity {
         }
         System.out.println(job);
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://" + Internet.ip + "/comfort_food/change_password.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://" + Internet.ip + "/comfort_food/adm_changepasword.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -88,13 +88,15 @@ public class Change_password extends AppCompatActivity {
                 try {
                     if (response.getString("key").equals("done")) {
 
-                        Toast.makeText(Change_password.this, "restaurant detail added succesfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Change_password.this, "password changed successfully", Toast.LENGTH_SHORT).show();
 
 
                         finish();
                     }
 
-                    if (response.getString("key").equals("restaurant exist")) {
+                    if (response.getString("key").equals("not done")) {
+
+                        Toast.makeText(Change_password.this, "error", Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -120,12 +122,6 @@ public class Change_password extends AppCompatActivity {
     }
 
 
-        public void update(View v)
-        {
-            Intent i = new Intent(Change_password.this ,HomeActivity.class);
-            startActivity(i);
-            return;
-        }
 
     }
 

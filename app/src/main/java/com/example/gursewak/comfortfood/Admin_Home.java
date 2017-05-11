@@ -7,9 +7,6 @@ import android.view.View;
 
 public class Admin_Home extends AppCompatActivity {
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +44,7 @@ public class Admin_Home extends AppCompatActivity {
 
     public void view_feedback (View v)
     {
-        Intent i = new Intent(Admin_Home.this ,Feedback.class);
+        Intent i = new Intent(Admin_Home.this ,Adminfeedback.class);
         startActivity(i);
         return;
     }

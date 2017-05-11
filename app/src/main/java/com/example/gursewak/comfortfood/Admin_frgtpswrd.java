@@ -23,8 +23,6 @@ public class Admin_frgtpswrd extends AppCompatActivity {
     }
     public void next_(View v)
     {
-
-
         String mobile =  mobile_et.getText().toString();
 
         if(mobile.length() < 10)
@@ -35,7 +33,7 @@ public class Admin_frgtpswrd extends AppCompatActivity {
 
         int randompin =  (int) (Math.random()*9000);
 
-        Intent i = new Intent(Admin_frgtpswrd.this, Onetime_password.class);
+        Intent i = new Intent(Admin_frgtpswrd.this, Admin_onetmpswrd.class);
 
         i.putExtra("mobile_key",mobile);
         i.putExtra("pin_key",String.valueOf(randompin));

@@ -97,28 +97,33 @@ public class Admin_profile extends AppCompatActivity {
         String email = email_et.getText().toString();
         String city = city_et.getText().toString();
 
-        if(username_et.equals(""))
+
+        if(username.equals(""))
         {
             Toast.makeText(Admin_profile.this, "enter your username", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if(name_et.equals(""))
+
+        if(name.equals(""))
         {
             Toast.makeText(Admin_profile.this, "enter the name", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(mobile_et.equals(""))
+
+        if(mobile.equals(""))
         {
             Toast.makeText(Admin_profile.this, "enter the mobile no", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(email_et.equals(""))
+
+        if(email.equals(""))
         {
             Toast.makeText(Admin_profile.this, "enter the email", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(city_et.equals(""))
+
+        if(city.equals(""))
         {
             Toast.makeText(Admin_profile.this, "enter the city", Toast.LENGTH_SHORT).show();
             return;
@@ -137,24 +142,45 @@ public class Admin_profile extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        System.out.println(job);
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet.ip+"/comfort_food/admin_editprofile.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://" + Internet.ip + "/comfort_food/update_admprofile.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 System.out.println(response);
 
+                try {
+                    if (response.getString("key").equals("done")) {
 
+                        Toast.makeText(Admin_profile.this, "Profile added succesfully", Toast.LENGTH_SHORT).show();
+
+                        SharedPreferences.Editor sp = getSharedPreferences("admin_info", MODE_PRIVATE).edit();
+
+                        sp.putString("admin_id", response.getString("admin_id"));
+                        sp.commit();
+
+                        finish();
+                    }
+
+                    if (response.getString("key").equals("")) {
+                        Toast.makeText(Admin_profile.this,"Error" , Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+
+                }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                System.out.println(error);
 
             }
         });
 
-        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 , 2));
+                jobreq.setRetryPolicy(new DefaultRetryPolicy(20000, 2, 2));
 
         AppController app = new AppController(Admin_profile.this);
         app.addToRequestQueue(jobreq);

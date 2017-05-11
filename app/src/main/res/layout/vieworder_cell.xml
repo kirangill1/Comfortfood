@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/view_orderrecyclier"
+    android:background="@drawable/ccircle"
+    android:layout_margin="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USERNAME"
+            android:textSize="20dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#1fb6b6"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USERNAME"
+            android:textSize="20dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#1fb6b6"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:id="@+id/username_tv"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLACED ON"
+            android:textSize="20dp"
+            android:textColor="#1fb6b6"
+            android:layout_marginLeft="3dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLACED ON "
+            android:textSize="20dp"
+            android:textColor="#1fb6b6"
+            android:layout_marginLeft="3dp"
+            android:textStyle="bold"
+            android:id="@+id/date_tv"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="PLACED AT "
+            android:textSize="20dp"
+            android:textColor="#1fb6b6"
+            android:textStyle="bold"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="QUANTITY"
+            android:textSize="20dp"
+            android:textColor="#1fb6b6"
+            android:textStyle="bold"
+            android:id="@+id/time_tv"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEW ITEMS"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:background="@drawable/circlegreengrad"
+        android:id="@+id/view_items"/>
+
+
+
+
+</LinearLayout>

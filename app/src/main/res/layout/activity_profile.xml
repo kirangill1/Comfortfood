@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/reddy"
+        android:src="@drawable/gradientt"
         android:scaleType="centerCrop"
         />
     <ScrollView
@@ -27,14 +27,13 @@
             android:layout_marginBottom="10dp"
             >
             <TextView
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
                 android:text="USER PROFILE"
-                android:textSize="25dp"
+                android:textSize="31dp"
                 android:textColor="#fff"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/circle"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:id="@+id/text_view"
@@ -52,7 +51,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/boy"
-                android:background="@color/redcolor"
+                android:background="#15b5ca"
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:id="@+id/username_eT"
@@ -82,7 +81,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/svg_user"
-               android:background="@color/redcolor"
+               android:background="#15b5ca"
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:id="@+id/name_eT"
@@ -114,7 +113,7 @@
                 android:src="@drawable/phone"
                 android:padding="10dp"
                 android:layout_centerVertical="true"
-                android:background="@color/redcolor"
+                android:background="#15b5ca"
                 android:id="@+id/mobile_no"
                 />
             <EditText
@@ -143,7 +142,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/email"
-               android:background="@color/redcolor"
+               android:background="#15b5ca"
                 android:padding="10dp"
 
                 android:layout_centerVertical="true"
@@ -176,7 +175,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/adress"
-               android:background="@color/redcolor"
+               android:background="#15b5ca"
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:id="@+id/City"
@@ -208,7 +207,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/adress"
-                android:background="@color/redcolor"
+                android:background="#15b5ca"
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:id="@+id/type"
@@ -228,16 +227,21 @@
                 />
         </RelativeLayout>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_height="65dp"
             android:layout_below="@+id/Address"
-            android:background="#ef868b"
+            android:background="@drawable/ciclegreen"
             android:layout_margin="15dp"
             android:text="UPDATE"
             android:textSize="40dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
             android:textStyle="bold"
-            android:textColor="#d21d1d"
+            android:textColor="#fff"
+            android:clickable="true"
+            android:onClick="update_data"
             />
+
 
 
 

@@ -44,6 +44,7 @@ public class user_menu_adapter extends RecyclerView.Adapter<user_menu_view_holde
             holder.item_name.setText(job.getString("Item_name"));
             holder.price.setText(job.getString("Price"));
             holder.item_type.setText(job.getString("item_type"));
+            holder.item_qty.setText(job.getString("item_qty"));
 
             Bitmap bmp = StringToBitMap(job.getString("image"));
             holder.i.setImageBitmap(bmp);
@@ -55,7 +56,7 @@ public class user_menu_adapter extends RecyclerView.Adapter<user_menu_view_holde
                 public void onClick(View view)
                 {
                     try {
-                        new qty_dialog(activity , job.getString("Mid") , job.getString("Item_name") , job.getString("Price")   ).show();
+                        new qty_dialog(activity , job.getString("Mid") , job.getString("Item_name") , job.getString("Price")    ).show();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

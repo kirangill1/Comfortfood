@@ -25,12 +25,17 @@ public class User_viewmenu extends AppCompatActivity {
 
     public static TextView cart_counter;
 
+    public static  User_viewmenu inst ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_viewmenu);
 
+        inst = this ;
+
+        cart_counter = (TextView) findViewById(R.id.counter_text);
 
         cart_array = new JSONArray();
 
@@ -45,12 +50,16 @@ public class User_viewmenu extends AppCompatActivity {
 
         }
         else {
-            Intent i = new Intent(User_viewmenu.this, Payment_mode.class);
+            Intent i = new Intent(User_viewmenu.this, Order_review.class);
+            i.putExtra("rest_id",getIntent().getStringExtra("rest_id"));
+            i.putExtra("order_items" , User_viewmenu.cart_array.toString());
+            i.putExtra("from" , "user");
+
 
             System.out.println(cart_array);
             startActivity(i);
 
-            finish();
+
         }
     }
 
