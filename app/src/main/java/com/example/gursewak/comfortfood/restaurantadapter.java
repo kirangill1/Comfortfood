@@ -42,7 +42,7 @@ public class restaurantadapter extends RecyclerView.Adapter<restaurant_viewholde
             holder.city.setText(job.getString("City"));
             holder.address.setText(job.getString("Address"));
             holder.type.setText(job.getString("food_type"));
-            holder.discount.setText(job.getString("discount"));
+            holder.discount.setText("Discount : "+job.getString("discount")+" %");
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

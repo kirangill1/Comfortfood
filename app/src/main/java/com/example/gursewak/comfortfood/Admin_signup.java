@@ -98,9 +98,6 @@ public class Admin_signup extends AppCompatActivity {
                 try {
                     if(response.getString("resultkey").equals("done"))
                     {
-
-
-
                         Toast.makeText(Admin_signup.this , "done" , Toast.LENGTH_SHORT).show();
 
                         SharedPreferences.Editor sp = getSharedPreferences("admin_info" , MODE_PRIVATE).edit();

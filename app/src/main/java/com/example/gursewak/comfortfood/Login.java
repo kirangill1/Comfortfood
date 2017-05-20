@@ -23,13 +23,12 @@ public class Login extends AppCompatActivity {
     {
         Intent i = new Intent(Login.this, Admin_login.class);
         startActivity(i);
-        finish();
+
 
     }
     public void Ulogin(View v)
     {
         Intent i = new Intent(Login.this, Userlogin.class);
         startActivity(i);
-        finish();
     }
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/restaurant_name_layout"
-    android:background="@drawable/ccircle"
+    android:background="@drawable/ciclegreen"
     android:layout_margin="10dp">
 
 
@@ -19,7 +19,7 @@
         android:text="RESTAURANT NAME"
         android:textSize="20dp"
         android:layout_marginLeft="3dp"
-        android:textColor="#1fb6b6"
+        android:textColor="#fff"
         android:layout_marginTop="3dp"
         android:textStyle="bold"
         android:id="@+id/restaurant_name"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="ADDRESS"
             android:textSize="20dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:layout_marginLeft="3dp"
             android:textStyle="bold"
             android:id="@+id/addresss"
@@ -55,7 +55,7 @@
             android:layout_marginLeft="3dp"
             android:text="CITY"
             android:textSize="20dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:textStyle="bold"
             android:id="@+id/cityy"
             />
@@ -72,7 +72,7 @@
             android:layout_marginLeft="3dp"
             android:text="TYPE"
             android:textStyle="bold"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:textSize="20dp"
             android:id="@+id/typee"
             />
@@ -90,10 +90,11 @@
             android:layout_marginLeft="3dp"
             android:text="DISCOUNT"
             android:textStyle="bold"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:textSize="20dp"
             android:id="@+id/discount"
             />
+
     </LinearLayout>
 
 </LinearLayout>

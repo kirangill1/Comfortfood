@@ -64,7 +64,6 @@
         <activity android:name=".Order_review" />
         <activity android:name=".Order_confirmation" />
         <activity android:name=".User_view_order" />
-        <activity android:name=".maina_ip"></activity>
     </application>
 
 </manifest>

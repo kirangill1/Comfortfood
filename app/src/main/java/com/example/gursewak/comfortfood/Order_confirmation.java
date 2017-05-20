@@ -55,7 +55,7 @@ public class Order_confirmation extends AppCompatActivity {
 
                         User_viewmenu.inst.finish();
 
-                        finish();
+                        
                     }
 
 

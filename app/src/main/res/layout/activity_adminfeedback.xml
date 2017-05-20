@@ -28,7 +28,7 @@
                 android:layout_width="135dp"
                 android:layout_height="130dp"
                 android:text="FEEDBACK"
-                android:textSize="21dp"
+                android:textSize="22dp"
                 android:textColor="#fff"
                 android:gravity="center"
                 android:textStyle="bold"

@@ -76,10 +76,7 @@ public class Admin_Leftoverfood extends AppCompatActivity {
                     if(response.getString("key").equals("done"))
                     {
 
-
                     }
-
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();

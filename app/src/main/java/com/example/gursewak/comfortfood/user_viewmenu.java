@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
@@ -47,8 +48,11 @@ public class User_viewmenu extends AppCompatActivity {
 
         if(User_viewmenu.cart_array.length()==0)
         {
-
+            Toast.makeText(User_viewmenu.this, "Please add the quantity", Toast.LENGTH_SHORT).show();
+            return;
         }
+
+
         else {
             Intent i = new Intent(User_viewmenu.this, Order_review.class);
             i.putExtra("rest_id",getIntent().getStringExtra("rest_id"));

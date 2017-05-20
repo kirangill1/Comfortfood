@@ -21,7 +21,7 @@
         android:text="ITEM NAME"
         android:textStyle="bold"
         android:textSize="15dp"
-        android:textColor="#1fb6b6"
+        android:textColor="#fff"
         android:layout_margin="9dp"
         android:layout_weight="1"
         android:id="@+id/item_name_id"
@@ -37,7 +37,7 @@
         android:layout_weight="1"
         android:layout_margin="9dp"
         android:id="@+id/item_qty_id"
-        android:textColor="#1fb6b6"/>
+        android:textColor="#fff"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
         android:layout_margin="9dp"
         android:layout_weight="1"
         android:id="@+id/item_price_id"
-        android:textColor="#1fb6b6"/>
+        android:textColor="#fff"/>
 
     </LinearLayout>
 </RelativeLayout>

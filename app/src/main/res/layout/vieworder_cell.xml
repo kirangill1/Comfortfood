@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/view_orderrecyclier"
-    android:background="@drawable/ccircle"
+    android:background="@drawable/ciclegreen"
     android:layout_margin="10dp"
     >
 
@@ -20,7 +20,7 @@
             android:text="USERNAME"
             android:textSize="20dp"
             android:layout_marginLeft="3dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:layout_marginTop="3dp"
             android:textStyle="bold"
 
@@ -33,7 +33,7 @@
             android:text="USERNAME"
             android:textSize="20dp"
             android:layout_marginLeft="3dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:layout_marginTop="3dp"
             android:textStyle="bold"
             android:id="@+id/username_tv"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:text="PLACED ON"
             android:textSize="20dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:layout_marginLeft="3dp"
             android:textStyle="bold"
 
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:text="PLACED ON "
             android:textSize="20dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:layout_marginLeft="3dp"
             android:textStyle="bold"
             android:id="@+id/date_tv"
@@ -81,7 +81,7 @@
             android:layout_marginLeft="3dp"
             android:text="PLACED AT "
             android:textSize="20dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:textStyle="bold"
              />
         <TextView
@@ -90,7 +90,7 @@
             android:layout_marginLeft="3dp"
             android:text="QUANTITY"
             android:textSize="20dp"
-            android:textColor="#1fb6b6"
+            android:textColor="#fff"
             android:textStyle="bold"
             android:id="@+id/time_tv"
             />

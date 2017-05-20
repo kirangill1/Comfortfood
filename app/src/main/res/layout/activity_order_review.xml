@@ -64,6 +64,25 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount Rs "
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"
+        android:id="@+id/tot_amount_head"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_toRightOf="@+id/tot_amount_head"
+        android:id="@+id/tot_amount"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
